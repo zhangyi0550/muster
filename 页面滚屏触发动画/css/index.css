@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: Simsun;
+}
+
+img{
+    border: none;
+}
+.clearfix:after{
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0;
+}
+.clear{
+    clear: both;
+}
+.top{
+    width: 100%;
+    height: 40px;
+}
+.container{
+    width: 100%;
+    height: 2250px;
+    background-color: #ccc;
+}
+.container .nav{
+    width: 1200px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+    background-color: red;
+}
+.container .slogan{
+    width: 1150px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+    background-color: red;
+}
+.container .content{
+    width: 1200px;
+    height: 2000px;
+    margin: 0 auto;
+    position: relative;
+
+}
+.container .content .hd{
+    width: 1200px;
+    height: 230px;
+    margin: 30px auto;
+}
+.container .content .hd1{
+   background-color: red;
+}
+.container .content .hd2{
+    background-color: orange;
+ }
+ .container .content .hd3{
+    background-color: yellow;
+ }
+ .container .content .hd4{
+    background-color: green;
+ }
+ .container .content .hd5{
+    background-color: blue;
+ }
+ .container .content .hd6{
+    background-color: teal;
+ } 
+ .container .content .hd7{
+    background-color: purple;
+ } 
+ .container .content .hd8{
+    background-color: silver;
+ }

@@ -1,0 +1,99 @@
+body{
+    height:2500px;
+    background-color: #000;
+}
+.down {
+    position: fixed;
+    z-index: 2;
+    width: 112px;
+    height: 84px;
+    background: url(../img/down.png) center no-repeat;
+    left: 50%;
+    margin-left: -56px;
+    bottom: 30px;
+    cursor: pointer;
+    transition: all 0.5s;
+    /* -webkit-animation: linear movetip 2s infinite;
+    animation: linear movetip 2s infinite; */
+}
+/*弹起动画开始*/
+.down{
+	-webkit-animation: bounceAnimate 3s ease infinite;
+	-moz-animation: bounceAnimate 3s ease infinite;
+	-o-animation: bounceAnimate 3s ease infinite;
+	-ms-animation: bounceAnimate 3s ease infinite;
+	animation: bounceAnimate 3s ease infinite;
+}
+@-webkit-keyframes bounceAnimate{
+	0%,50%,100%{-webkit-transform:translate(0px,0px);}
+	25%,75%{-webkit-transform:translate(0px,-30px);}
+}
+@-moz-keyframes bounceAnimate{
+	0%,50%,100%{-moz-transform:translate(0px,0px);}
+	25%,75%{-moz-transform:translate(0px,-30px);}
+}
+@-o-keyframes bounceAnimate{
+	0%,50%,100%{-o-transform:translate(0px,0px);}
+	25%,75%{-o-transform:translate(0px,-30px);}
+}
+@-ms-keyframes bounceAnimate{
+	0%,50%,100%{-ms-transform:translate(0px,0px);}
+	25%,75%{-ms-transform:translate(0px,-30px);}
+}
+@keyframes bounceAnimate{
+	0%,50%,100%{transform:translate(0px,0px);}
+	25%,75%{transform:translate(0px,-30px);}
+}
+
+.slogan {
+    width: 749px;
+    height: 329px;
+    position: absolute;
+    top: 136px;
+    left: 50%;
+    margin-left: -363px;
+    animation: zoomOut 0.5s 0.6s ease-out 1 forwards;
+    -moz-animation: zoomOut 0.5s 0.6s ease-out 1 forwards;
+    -webkit-animation: zoomOut 0.5s 0.6s ease-out 1 forwards;
+    -ms-animation: zoomOut 0.5s 0.6s ease-out 1 forwards;
+}
+.opacity{
+	opacity: 0;
+	opacity: 1\9;
+}
+.zoom-in{
+	animation: zoomIn 0.5s 0.5s ease 1 forwards;
+	-moz-animation: zoomIn 0.5s 0.5s ease 1 forwards;
+	-webkit-animation: zoomIn 0.5s 0.5s ease 1 forwards;
+	-ms-animation: zoomIn 0.5s 0.5s ease 1 forwards;
+}
+.fadeInUp{
+	animation: fadeInUp 1s ease 1 forwards;
+	-moz-animation: fadeInUp 1s ease 1 forwards;
+	-webkit-animation: fadeInUp 1s ease 1 forwards;
+	-ms-animation: fadeInUp 1s ease 1 forwards;
+}
+.fadeInUpXs{
+	animation: fadeInUpXs 1s ease 1 forwards;
+	-moz-animation: fadeInUpXs 1s ease 1 forwards;
+	-webkit-animation: fadeInUpXs 1s ease 1 forwards;
+	-ms-animation: fadeInUpXs 1s ease 1 forwards;
+}
+.fadeInLeft{
+	animation: fadeInLeft 1s ease 1 forwards;
+	-moz-animation: fadeInLeft 1s ease 1 forwards;
+	-webkit-animation: fadeInLeft 1s ease 1 forwards;
+	-ms-animation: fadeInLeft 1s ease 1 forwards;
+}
+.fadeInDown{
+	animation: fadeInDown 1s ease 1 forwards;
+	-moz-animation: fadeInDown 1s ease 1 forwards;
+	-webkit-animation: fadeInDown 1s ease 1 forwards;
+	-ms-animation: fadeInDown 1s ease 1 forwards;
+}
+.fadeInDownXs{
+	animation: fadeInDownXs 1s ease 1 forwards;
+	-moz-animation: fadeInDownXs 1s ease 1 forwards;
+	-webkit-animation: fadeInDownXs 1s ease 1 forwards;
+	-ms-animation: fadeInDownXs 1s ease 1 forwards;
+}

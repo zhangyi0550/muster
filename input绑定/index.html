@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>checkbox</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <p>我想去<span id="spanId">shanghao </span></p>
+    <form action="#" id="form">
+        <input type="radio" name="city" value="南京">南京
+        <input type="radio" name="city" value="北京">北京
+        <input type="radio" name="city" value="纽约">纽约
+    </form>
+    <script>
+        $(function () {
+            $("input[name=city]").click(function () {
+                var arr = [];
+                $("input[name=city]").each(function () {
+                    if (this.checked) {
+                        arr.push(this.value);
+                    } else {
+                        var index = arr.indexOf(this.value);
+                        if (index != -1) {
+                            arr[index] = "";
+                        }
+                    }
+                });
+                $("#spanId").text(arr.join(","));
+            })
+        });
+    </script>
+</body>
+
+</html>

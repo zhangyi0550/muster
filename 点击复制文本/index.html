@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    span{
+        display: block;
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    
+<span onclick="copyContent(this);" title="点击复制">张 三</span>
+<span onclick="copyContent(this);" title="点击复制">李 四</span>
+
+    
+    <input id="copy_content" type="text" value=""  style="position: absolute;top: 0;left: 0;opacity: 0;z-index: -10;"/>
+
+
+</body>
+<script type="text/javascript">
+    function copyContent(ElementObj){
+        //获取点击的值
+        var clickContent = ElementObj.innerText;         
+        //获取要赋值的input的元素
+        var inputElement =  document.getElementById("copy_content");
+        //给input框赋值
+        inputElement.value = clickContent;
+        //选中input框的内容
+        inputElement.select();
+         // 执行浏览器复制命令
+        document.execCommand("Copy");
+        //提示已复制
+        alert('已复制');
+
+         
+    }
+</script>
+</html>

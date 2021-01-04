@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+img {
+    border: none;
+}
+
+.top {
+    width: 100%;
+    height: 45px;
+}
+
+.container {
+    width: 100%;
+    height: 1381px;
+    background: url('../img/bg.png') no-repeat top;
+}
+
+.back {
+    width: 100%;
+    height: 40px;
+}
+
+.back .fhgw {
+    width: 169px;
+    height: 40px;
+    text-align: center;
+    display: block;
+    float: right;
+    line-height: 40px;
+    margin-right: 16%;
+    color: #fd5c71;
+    background-color: rgb(235 181 150);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#3ae6bb0d, endColorstr=#3ae6bb0d);
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: Simsun;
+}
+
+.slogan {
+    width: 763px;
+    height: 220px;
+    margin: 0 auto;
+    margin-top: 40px;
+    background: url('../img/slogan.png') no-repeat;
+}
+
+.slogan .time {
+    width: 763px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-family: FZDaBiaoSong-B06S;
+    color: #f5de1e;
+    font-size: 24px;
+    margin: 0 auto;
+
+}
+
+.content {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.content .title {
+    width: 1198px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border: 1px solid #000;
+    border-bottom: none;
+    background-color: #8EAADC;
+}
+
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.content table tr {
+    width: 100%;
+    height: 50px;
+}
+
+.content table tr th {
+    width: 25%;
+}
+
+.content table tr td.item1 {
+    background-color: #DEEBF6;
+}
+
+.content table tr td.item2 {
+    background-color: #DEEBF6;
+}
+
+.content table tr:first-of-type .item1 {
+    background-color: #9CC3E6;
+}
+
+.content table tr:first-of-type .item2 {
+    background-color: #9CC3E6;
+}
+
+.content table tr td {
+    text-align: center;
+}
+
+
+
+.content table tr input {
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 18px;
+}
+
+.content table tr td .btn1 {
+    width: 100px;
+    height: 25px;
+    border: none;
+}
+
+.content table tr td.total {
+    width: 50%;
+}
+
+.feet {
+    width: 100%;
+    height: 49px;
+    border: 1px solid #000;
+    border-top: 0;
+    box-sizing: border-box;
+}
+
+.feet .total {
+    width: 50%;
+    height: 48px;
+    float: left;
+    background-color: #D0CECE;
+    border-bottom: 1px solid #000;
+
+    box-sizing: border-box;
+}
+
+.feet .total input {
+    width: 100%;
+    height: 48px;
+    text-align: center;
+    line-height: 50px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.feet .clean {
+    width: 50%;
+    height: 48px;
+    float: left;
+    background-color: #D0CECE;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    box-sizing: border-box;
+}
+
+.feet .clean button {
+    width: 100%;
+    height: 48px;
+    text-align: center;
+    line-height: 50px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    text-decoration: underline;
+}

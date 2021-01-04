@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="draw" id="lottery">
+        <table >
+            <tr>
+                <td class="item lottery-unit lottery-unit-0">
+                    <div class="img">
+                        <img src="img/img1.png" alt="">
+                    </div>
+                  
+                </td>
+
+                <td class="item lottery-unit lottery-unit-1">
+                    <div class="img">
+                        <img src="img/img2.png" alt="">
+                    </div>
+                    
+                </td>
+
+                <td class="item lottery-unit lottery-unit-2">
+                    <div class="img">
+                        <img src="img/img3.png" alt="">
+                    </div>
+                    
+                </td>
+                <td class="item lottery-unit lottery-unit-3">
+                    <div class="img">
+                        <img src="img/img4.png" alt="">
+                    </div>
+                    
+                </td>
+            </tr>
+          
+            <tr>
+                <td class="item lottery-unit lottery-unit-9">
+                    <div class="img">
+                        <img src="img/img10.png" alt="">
+                    </div>
+                  
+                </td>
+                <td colspan="2">
+                    <div>
+                            <a class="draw-btn" href="javascript:">立即抽奖</a>
+                    </div>
+                </td>
+                <td class="item lottery-unit lottery-unit-4">
+                    <div class="img">
+                        <img src="img/img5.png" alt="">
+                    </div>
+                  
+                </td>
+            </tr>
+           
+            <tr>
+                <td class="item lottery-unit lottery-unit-8">
+                    <div class="img">
+                        <img src="img/img9.png" alt="">
+                    </div>
+                  
+                </td>
+                <td class="item lottery-unit lottery-unit-7">
+                    <div class="img">
+                        <img src="img/img8.png" alt="">
+                    </div>
+                   
+                </td>
+                <td class="item lottery-unit lottery-unit-6">
+                    <div class="img">
+                        <img src="img/img7.png" alt="">
+                    </div>
+                   
+                </td>
+                <td class="item lottery-unit lottery-unit-5">
+                    <div class="img">
+                        <img src="img/img6.png" alt="">
+                    </div>
+                   
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+    var lottery = {
+        index: -1,    //当前转动到哪个位置，起点位置
+        count: 0,     //总共有多少个位置
+        timer: 0,     //setTimeout的ID，用clearTimeout清除
+        speed: 20,    //初始转动速度
+        times: 0,     //转动次数
+        cycle: 10,    //转动基本次数：即至少需要转动多少次再进入抽奖环节
+        prize: -1,    //中奖位置
+        init: function(id) {
+            if ($('#' + id).find('.lottery-unit').length > 0) {
+                $lottery = $('#' + id);
+                $units = $lottery.find('.lottery-unit');
+                this.obj = $lottery;
+                this.count = $units.length;
+                $lottery.find('.lottery-unit.lottery-unit-' + this.index).addClass('active');
+            };
+        },
+        roll: function() {
+            var index = this.index;
+            var count = this.count;
+            var lottery = this.obj;
+            $(lottery).find('.lottery-unit.lottery-unit-' + index).removeClass('active');
+            index += 1;
+            if (index > count - 1) {
+                index = 0;
+            };
+            $(lottery).find('.lottery-unit.lottery-unit-' + index).addClass('active');
+            this.index = index;
+            return false;
+        },
+        stop: function(index) {
+            this.prize = index;
+            return false;
+        }
+    };
+    
+    function roll() {
+        lottery.times += 1;
+        lottery.roll(); //转动过程调用的是lottery的roll方法，这里是第一次调用初始化
+        
+        if (lottery.times > lottery.cycle + 10 && lottery.prize == lottery.index) {
+            clearTimeout(lottery.timer);
+            lottery.prize = -1;
+            lottery.times = 0;
+            click = false;
+        } else {
+            if (lottery.times < lottery.cycle) {
+                lottery.speed -= 10;
+            } else if (lottery.times == lottery.cycle) {
+                var index = Math.random() * (lottery.count) | 0; //静态演示，随机产生一个奖品序号，实际需请求接口产生
+                lottery.prize = index;		
+            } else {
+                if (lottery.times > lottery.cycle + 10 && ((lottery.prize == 0 && lottery.index == 7) || lottery.prize == lottery.index + 1)) {
+                    lottery.speed += 110;
+                } else {
+                    lottery.speed += 20;
+                }
+            }
+            if (lottery.speed < 20) {
+                lottery.speed = 20;
+            };
+            lottery.timer = setTimeout(roll, lottery.speed); //循环调用
+        }
+        return false;
+    }
+    
+    var click = false;
+    
+    window.onload = function(){
+        lottery.init('lottery');
+    
+        $('.draw-btn').click(function() {
+            if (click) { //click控制一次抽奖过程中不能重复点击抽奖按钮，后面的点击不响应
+                return false;
+            } else {
+                lottery.speed = 20;
+                roll(); //转圈过程不响应click事件，会将click置为false
+                click = true; //一次抽奖完成后，设置click为true，可继续抽奖
+                return false;
+            }
+        });
+    };
+    </script>
+</html>

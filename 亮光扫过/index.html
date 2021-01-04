@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>图片效果_B5教程网</title>
+<style type="text/css">
+.banner{float:left;width: 657px; padding-top:10px;display:line-block;}
+.banner:before{
+	content:"";
+	position: absolute;
+	left: -600px;
+	top: -600px;
+	width: 300px;
+	height: 15px;outline:px solid red;
+	background-color: rgba(255,255,255,.6);
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-animation: searchLights 3s ease-in 1.5s infinite;
+	-o-animation: searchLights 3s ease-in 1.5s infinite;
+	animation: searchLights 3s ease-in 1.5s infinite;
+}
+@-webkit-keyframes searchLights {
+	0% { left: -657px; top: 0; }
+	to { left: 657px; top: 100px; }
+}
+@-o-keyframes searchLights {
+	0% { left: -657px; top: 0; }
+	to { left: 657px; top: 100px; }
+}
+@-moz-keyframes searchLights {
+	0% { left: -657px; top: 0; }
+	to { left: 657px; top: 100px; }
+}
+@keyframes searchLights {
+	0% { left: -657px; top: 0; }
+	to { left: 657px; top: 100px; }
+}
+</style>
+</head>
+<body>
+<div class="banner"><img src="img/img.png" alt="B5教程网" /></div> 
+</body>
+</html>

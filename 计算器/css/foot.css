@@ -1,0 +1,361 @@
+.foot {
+    width: 100%;
+    height: 230px;
+    background-color: #f3f3f5;
+    position: relative;
+}
+
+.areaheart {
+    width: 1200px;
+    height: 230px;
+    margin: 0 auto;
+}
+
+.foot .footLogo {
+    width: 248px;
+    height: 141px;
+    margin-left: 42px;
+    margin-top: 40px;
+    margin-right: 35px;
+    float: left;
+    background: url(/img/big-logo.png) no-repeat;
+}
+
+.foot .footlogo-1 {
+    width: 155px;
+    height: 140px;
+    display: block;
+    float: left;
+    background: url('../img/footlogo-1.png') no-repeat;
+    margin-top: 42px;
+}
+
+.foot .footlogo-2 {
+    width: 155px;
+    height: 140px;
+    display: block;
+    float: left;
+    background: url('../img/footlogo-2.png') no-repeat;
+    margin-top: 42px;
+}
+
+.foot .footlogo-3 {
+    width: 155px;
+    height: 140px;
+    display: block;
+    float: left;
+    background: url('../img/footlogo-3.png') no-repeat;
+    margin-top: 42px;
+}
+
+.foot .footerInf {
+    line-height: 32px;
+    font-size: 14px;
+    color: #2a2933;
+    font-weight: bold;
+    float: left;
+    margin-top: 47px;
+    position: relative;
+}
+
+.foot .footerInf .age {
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    right: 100px;
+    top: 15px;
+    display: block;
+}
+
+.foot .footerInf p {
+    line-height: 24px;
+}
+
+
+.foot .word-s {
+    width: 1200px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.foot .word-s p {
+    width: 1035px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.foot .footerInf p a {
+    color: #2a2933
+}
+
+/*����*/
+.float-img {
+    width: 230px;
+    height: 1080px;
+    position: fixed;
+    top: 22%;
+    right: 0px;
+}
+
+.float-img .float-1 {
+
+    width: 150px;
+    height: 129px;
+    display: block;
+    background: url('../img/fl_cartoon_02.png') no-repeat;
+}
+
+.float-img .float-2 {
+    width: 150px;
+    height: 129px;
+    display: block;
+    background: url('../img/fl_cartoon_03.png') no-repeat;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.float-img .float-3 {
+
+    width: 150px;
+    height: 129px;
+    display: block;
+    background: url('../img/fl_cartoon_01.png') no-repeat;
+}
+
+/*���𶯻���ʼ*/
+.bounce1 {
+    -webkit-animation: bounceAnimate1 8s ease infinite;
+    -moz-animation: bounceAnimate1 8s ease infinite;
+    -o-animation: bounceAnimate1 8s ease infinite;
+    -ms-animation: bounceAnimate1 8s ease infinite;
+    animation: bounceAnimate1 8s ease infinite;
+}
+
+@-webkit-keyframes bounceAnimate1 {
+
+    0%,
+    50%,
+    100% {
+        -webkit-transform: translate(0px, 0px);
+    }
+
+    25%,
+    75% {
+        -webkit-transform: translate(0px, -30px);
+    }
+}
+
+@-moz-keyframes bounceAnimate1 {
+
+    0%,
+    50%,
+    100% {
+        -moz-transform: translate(0px, 0px);
+    }
+
+    25%,
+    75% {
+        -moz-transform: translate(0px, -30px);
+    }
+}
+
+@-o-keyframes bounceAnimate1 {
+
+    0%,
+    50%,
+    100% {
+        -o-transform: translate(0px, 0px);
+    }
+
+    25%,
+    75% {
+        -o-transform: translate(0px, -30px);
+    }
+}
+
+@-ms-keyframes bounceAnimate1 {
+
+    0%,
+    50%,
+    100% {
+        -ms-transform: translate(0px, 0px);
+    }
+
+    25%,
+    75% {
+        -ms-transform: translate(0px, -30px);
+    }
+}
+
+@keyframes bounceAnimate1 {
+
+    0%,
+    50%,
+    100% {
+        transform: translate(0px, 0px);
+    }
+
+    25%,
+    75% {
+        transform: translate(0px, -30px);
+    }
+}
+
+/*���𶯻���ʼ*/
+.bounce2 {
+    -webkit-animation: bounceAnimate2 7s ease infinite;
+    -moz-animation: bounceAnimate2 7s ease infinite;
+    -o-animation: bounceAnimate2 7s ease infinite;
+    -ms-animation: bounceAnimate2 7s ease infinite;
+    animation: bounceAnimate2 7s ease infinite;
+}
+
+@-webkit-keyframes bounceAnimate2 {
+
+    0%,
+    50%,
+    100% {
+        -webkit-transform: translate(0px, 0px);
+    }
+
+    25%,
+    75% {
+        -webkit-transform: translate(0px, -30px);
+    }
+}
+
+@-moz-keyframes bounceAnimate2 {
+
+    0%,
+    50%,
+    100% {
+        -moz-transform: translate(0px, 0px);
+    }
+
+    25%,
+    75% {
+        -moz-transform: translate(0px, -30px);
+    }
+}
+
+@-o-keyframes bounceAnimate2 {
+
+    0%,
+    50%,
+    100% {
+        -o-transform: translate(0px, 0px);
+    }
+
+    25%,
+    75% {
+        -o-transform: translate(0px, -30px);
+    }
+}
+
+@-ms-keyframes bounceAnimate2 {
+
+    0%,
+    50%,
+    100% {
+        -ms-transform: translate(0px, 0px);
+    }
+
+    25%,
+    75% {
+        -ms-transform: translate(0px, -30px);
+    }
+}
+
+@keyframes bounceAnimate2 {
+
+    0%,
+    50%,
+    100% {
+        transform: translate(0px, 0px);
+    }
+
+    25%,
+    75% {
+        transform: translate(0px, -30px);
+    }
+}
+
+/*���𶯻���ʼ*/
+.bounce3 {
+    -webkit-animation: bounceAnimate3 9s ease infinite;
+    -moz-animation: bounceAnimate3 9s ease infinite;
+    -o-animation: bounceAnimate3 9s ease infinite;
+    -ms-animation: bounceAnimate3 9s ease infinite;
+    animation: bounceAnimate3 9s ease infinite;
+}
+
+@-webkit-keyframes bounceAnimate3 {
+
+    0%,
+    50%,
+    100% {
+        -webkit-transform: translate(0px, 0px);
+    }
+
+    25%,
+    75% {
+        -webkit-transform: translate(0px, -30px);
+    }
+}
+
+@-moz-keyframes bounceAnimate3 {
+
+    0%,
+    50%,
+    100% {
+        -moz-transform: translate(0px, 0px);
+    }
+
+    25%,
+    75% {
+        -moz-transform: translate(0px, -30px);
+    }
+}
+
+@-o-keyframes bounceAnimate3 {
+
+    0%,
+    50%,
+    100% {
+        -o-transform: translate(0px, 0px);
+    }
+
+    25%,
+    75% {
+        -o-transform: translate(0px, -30px);
+    }
+}
+
+@-ms-keyframes bounceAnimate3 {
+
+    0%,
+    50%,
+    100% {
+        -ms-transform: translate(0px, 0px);
+    }
+
+    25%,
+    75% {
+        -ms-transform: translate(0px, -30px);
+    }
+}
+
+@keyframes bounceAnimate3 {
+
+    0%,
+    50%,
+    100% {
+        transform: translate(0px, 0px);
+    }
+
+    25%,
+    75% {
+        transform: translate(0px, -30px);
+    }
+}

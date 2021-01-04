@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+body {
+    margin: 0;
+    background: #06bae7;
+}
+
+.tbody {
+    width: 1000px;
+    margin: 150px auto;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+}
+
+.tbody div {
+    margin: auto 2px;
+}
+
+.tm {
+    height: 320px;
+    width: 200px;
+    position: relative;
+}
+
+.tm img {
+    height: 320px;
+    width: 200px;
+}
+
+/* 使用span模拟边框 */
+span {
+    position: absolute;
+    background: white;
+    transition: all .1s;
+    /*
+* 上面设置全部速度为0.1s :一个（div、span...）动画过程为0.1秒
+* 下面浏览器兼容
+*/
+    -o-transition: all .1s;
+    -webkit-transition: all .1s;
+    -moz-transition: all .1s;
+}
+
+/* 上边框 */
+.line-top {
+    /* 在鼠标不在图片上时的样式 */
+    height: 0.8%;
+    width: 98%;
+    top: 1%;
+    right: 1%;
+    /* 在鼠标离开图片后延迟0.4S开始恢复到上面的样式 恢复速度为0.1S */
+    transition-delay: .4S;
+    -o-transition-delay: .4s;
+    -moz-transition-delay: .4s;
+    -webkit-transition-delay: .4s;
+}
+
+.tm:hover .line-top {
+    /* 触发:hover事件后span的样式变化 可以设置多个 如：height；top；left等
+这里设置的是上边框的伸缩，所以只设置width；
+  当触发:hvoer事件0秒后代表上边框的span的宽以动画的方式逐渐变为0（下方设置的）,为0后不可见*/
+    width: 0;
+    /* 设置:hover事件触发后几秒开始动画 速度0.1S*/
+    transition-delay: 0S;
+    -o-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+}
+
+/* 右边框 */
+.line-right {
+    bottom: 1%;
+    right: 1%;
+    height: 98%;
+    width: 1%;
+    transition-delay: .3s;
+    -o-transition-delay: .3s;
+    -moz-transition-delay: .3s;
+    -webkit-transition-delay: .3s;
+}
+
+.tm:hover .line-right {
+    height: 0;
+    /* 右边框改变其高度到0使其不可见 */
+    transition-delay: .1S;
+    -o-transition-delay: .1s;
+    -moz-transition-delay: .1s;
+    -webkit-transition-delay: .1s;
+}
+
+/* 下边框 */
+.line-bottom {
+    height: 0.8%;
+    width: 98%;
+    left: 1%;
+    bottom: 1%;
+    transition-delay: .2s;
+    -o-transition-delay: .2s;
+    -moz-transition-delay: .2s;
+    -webkit-transition-delay: .2s;
+}
+
+.tm:hover .line-bottom {
+    width: 0;
+    transition-delay: .2s;
+    -o-transition-delay: .2s;
+    -moz-transition-delay: .2s;
+    -webkit-transition-delay: .2s;
+}
+
+/* 左边框 */
+.line-left {
+    top: 1%;
+    left: 1%;
+    height: 98%;
+    width: 1%;
+    transition-delay: .0s;
+    -o-transition-delay: .0s;
+    -moz-transition-delay: .0s;
+    -webkit-transition-delay: .0s;
+}
+
+.tm:hover .line-left {
+    height: 0;
+    transition-delay: .3S;
+    -o-transition-delay: .3s;
+    -moz-transition-delay: .3s;
+    -webkit-transition-delay: .3s;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<link rel="stylesheet" href="css/reset.css">
+<style>
+.case {
+	width: 800px;
+	margin: 60px 0 80px;
+	display: inline-block;
+	padding-top: 0;
+	padding-right: auto;
+	padding-left: auto;
+	padding-bottom: 0;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.case {margin: 0 30px 30px 0;}
+.case ul {width: 800px;margin: 0 auto;}
+.case>ul li {display: inline-block;margin-right: 10px;}
+.case .grid-content {position: relative;overflow: hidden;}
+.case .grid-content>img {width: 200px;height: 130px;display: inline-block;background: #ccc;}
+.case .grid-content .grid-shade {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	color: #5E5E5E;
+	font-size: 20px;
+	display: none;
+	padding: 20px 0 0 20px;
+}
+.case .grid-content .grid-shade .grid-enter {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+.case .grid-content .grid-shade .grid-enter a {
+color: #848484;
+}
+.case .grid-content .grid-shade .grid-enter>img {width: 28px;vertical-align: top;margin-top: 10px;}
+</style>
+</head>
+<body>
+
+	<div class="case">
+		<ul>
+			<li>
+				<div class="grid-content">
+					<img src="images/a1.png" alt="">
+					<div class="grid-shade">
+						<div class="grid-enter">
+							<a href="">information</a>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="grid-content">
+					<img src="images/a2.png" alt="">
+					<div class="grid-shade">
+						<div class="grid-enter">
+							<a href="">information</a>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="grid-content">
+					<img src="images/a3.png" alt="">
+					<div class="grid-shade">
+						<div class="grid-enter">
+							<a href="">information</a>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="grid-content">
+					<img src="images/a4.png" alt="">
+					<div class="grid-shade">
+						<div class="grid-enter">
+							<a href="">information</a>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="grid-content">
+					<img src="images/a5.png" alt="">
+					<div class="grid-shade">
+						<div class="grid-enter">
+							<a href="">information</a>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="grid-content">
+					<img src="images/a6.png" alt="">
+					<div class="grid-shade">
+						<div class="grid-enter">
+							<a href="">information</a>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/mouseMoving.js"></script>
+<script>
+/**
+ *  $('.grid-content') 该元素为内容的父元素
+ *  '.grid-shade'  	   该元素为鼠标移入移出的遮罩层
+ */ 
+$('.grid-content').mouseMove('.grid-shade')
+</script>
+
+</body>
+</html>

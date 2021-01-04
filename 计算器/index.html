@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=640" />
+    <meta name="viewport" content="width=1536" />
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/foot.css">
+    <link rel="stylesheet" href="css/top.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="top">
+        <div class="Tophead">
+            <div class="logo fl">
+                <a href="http://www.mvp9.com" target="_blank" class="logoLy" title="萌萌哒儿游戏平台">
+                    <img src="/img/logo.png" alt="萌萌哒儿游戏平台" style="height: 30px;"></a>
+            </div>
+
+            <div class="right fr">
+
+                <ul class="mainNav_menu">
+
+                    <li style="display: "><a
+                            href="http://user.mvp9.com/logins.aspx?backURL=http://long.mvp9.com/index.aspx"
+                            id="Header_aLogin" target="_blank" rel="nofollow">登录</a></li>
+                    <li style="display: "><a href="http://user.mvp9.com/registers.aspx?gid=1" target="_blank"
+                            rel="nofollow">账号注册</a></li>
+                    <li style="display: none"><a href="javascript:void(0)" rel="nofollow"></a></li>
+                    <li style="display: none"></li>
+                    <li><a href="http://user.mvp9.com">个人中心</a></li>
+                    <li><a href="http://pay.mvp9.com/Pays.aspx?gID=1" target="_blank">充值</a></li>
+                    <li style="background: none; display:none;"><a href="http://bbs.mvp9.com/forum.php?gid=49"
+                            target="_blank">论坛</a></li>
+                    <li class="mainleyoul"><a class="leyouGame_qx" href="javascript:void(0)">萌萌哒旗下游戏</a>
+                        <ul class="sub_nav_01">
+                            <li class="gameMenu01">
+                                <dl>
+                                    <dt>客户端游戏</dt>
+
+                                    <dd><a href="http://long.mvp9.com" target="_blank" class="">猎龙战记</a></dd>
+
+                                    <dd><a href="http://kx.mvp9.com" target="_blank" class="">开心OL</a></dd>
+
+                                    <dd><a href="http://dh.mvp9.com" target="_blank" class="">大话红楼</a></dd>
+
+                                </dl>
+
+                            </li>
+                            <li class="gameMenu02">
+                                <dl>
+                                    <dd><a href="http://user.mvp9.com/changepwd.aspx">修改密码</a></dd>
+                                    <dd><a href="http://user.mvp9.com//RetakePassword.aspx">找回密码</a></dd>
+                                    <dd><a href="http://pay.mvp9.com/Pays.aspx?gID=1">充值中心</a></dd>
+                                    <dd><a href="http://www.mvp9.com/Kefu/Index.aspx?t=1">游戏客服</a></dd>
+                                </dl>
+
+                            </li>
+                        </ul>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="back"><a class="fhgw" href="http://long.mvp9.com/">返回官网</a></div>
+        <div class="slogan"><span class="time"></span></div>
+
+        <div class="content">
+            <div class="title">宠物星级属性计算器</div>
+            <table border="1">
+                <tr>
+                    <th class="item1">宠物星级</th>
+                    <th class="num1"><input type="text" name="" class="input" id="text0" value="20"
+                            onblur="Check(this)"></th>
+                    <th class="item2">属性提升</th>
+                    <th class="num2">计算结果</th>
+                </tr>
+                <tr>
+                    <td class="item1">物理攻击</td>
+                    <td class="num1"><input type="text" name="" class="input" id="text1" onblur="Check2(this)"></td>
+                    <td class="item2">物理攻击提升比例</td>
+                    <td class="num2"><input type="text" name="" class="input" id="text1-1" readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td class="item1">魔法攻击</td>
+                    <td class="num1"><input type="text" name="" class="input" id="text2" onblur="Check2(this)"></td>
+                    <td class="item2">魔法攻击提升比例</td>
+                    <td class="num2"><input type="text" name="" class="input" id="text2-1" readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td class="item1">物理防御</td>
+                    <td class="num1"><input type="text" name="" class="input" id="text3" onblur="Check2(this)"></td>
+                    <td class="item2">物理防御提升比例</td>
+                    <td class="num2"><input type="text" name="" class="input" id="text3-1" readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td class="item1">魔法防御</td>
+                    <td class="num1"><input type="text" name="" class="input" id="text4" onblur="Check2(this)"></td>
+                    <td class="item2">魔法防御提升比例</td>
+                    <td class="num2"><input type="text" name="" class="input" id="text4-1" readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td class="item1">智力</td>
+                    <td class="num1"><input type="text" name="" class="input" id="text5" onblur="Check2(this)"></td>
+                    <td class="item2">智力提升比例</td>
+                    <td class="num2"><input type="text" name="" class="input" id="text5-1" readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td class="item1">力量</td>
+                    <td class="num1"><input type="text" name="" class="input" id="text6" onblur="Check2(this)"></td>
+                    <td class="item2">力量提升比例</td>
+                    <td class="num2"><input type="text" name="" class="input" id="text6-1" readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td class="item1">敏捷</td>
+                    <td class="num1"><input type="text" name="" class="input" id="text7" onblur="Check2(this)"></td>
+                    <td class="item2">敏捷提升比例</td>
+                    <td class="num2"><input type="text" name="" class="input" id="text7-1" readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td class="item1">魔法伤害</td>
+                    <td class="num1"><input type="text" name="" class="input" id="text8" onblur="Check2(this)"></td>
+                    <td class="item2">魔法伤害提升比例</td>
+                    <td class="num2"><input type="text" name="" class="input" id="text8-1" readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td class="item1">物理伤害</td>
+                    <td class="num1"><input type="text" name="" class="input" id="text9" onblur="Check2(this)"></td>
+                    <td class="item2">物理伤害提升比例</td>
+                    <td class="num2"><input type="text" name="" class="input" id="text9-1" readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td class="item1">命中</td>
+                    <td class="num1"><input type="text" name="" class="input" id="text10" onblur="Check2(this)"></td>
+                    <td class="item2">命中提升比例</td>
+                    <td class="num2"><input type="text" name="" class="input" id="text10-1" readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td class="item1">闪避</td>
+                    <td class="num1"><input type="text" name="" class="input" id="text11" onblur="Check2(this)"></td>
+                    <td class="item2">闪避提升比例</td>
+                    <td class="num2"><input type="text" name="" class="input" id="text11-1" readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td class="item1">物理暴击</td>
+                    <td class="num1"><input type="text" name="" class="input" id="text12" onblur="Check2(this)"></td>
+                    <td class="item2">物理暴击提升比例</td>
+                    <td class="num2"><input type="text" name="" class="input" id="text12-1" readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td class="item1">魔法暴击</td>
+                    <td class="num1"><input type="text" name="" class="input" id="text13" onblur="Check2(this)"></td>
+                    <td class="item2">魔法暴击提升比例</td>
+                    <td class="num2"><input type="text" name="" class="input" id="text13-1" readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td class="item1">物理防暴</td>
+                    <td class="num1"><input type="text" name="" class="input" id="text14" onblur="Check2(this)"></td>
+                    <td class="item2">物理防暴提升比例</td>
+                    <td class="num2"><input type="text" name="" class="input" id="text14-1" readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td class="item1">魔法防暴</td>
+                    <td class="num1"><input type="text" name="" class="input" id="text15" onblur="Check2(this)"></td>
+                    <td class="item2">提升比例</td>
+                    <td class="num2"><input type="text" name="" class="input" id="text15-1" readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td class="item1">幸运</td>
+                    <td class="num1"><input type="text" name="" class="input" id="text16" onblur="Check2(this)"></td>
+                    <td class="item2">幸运提升比例</td>
+                    <td class="num2"><input type="text" name="" class="input" id="text16-1" readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td class="item1">体力</td>
+                    <td class="num1"><input type="text" name="" class="input" id="text17" onblur="Check2(this)"></td>
+                    <td class="item2">体力提升比例</td>
+                    <td class="num2"><input type="text" name="" class="input" id="text17-1" readonly="readonly"></td>
+                </tr>
+            </table>
+            <div class="feet">
+                <div class="total"><input type="button" value="计算" onclick="count()" /></div>
+                <div class="clean"><button class="btn1">清除</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="footer areaheart">
+            <a href="http://www.mvp9.com" class="fl footlogo-1" title="萌萌哒游戏平台"></a>
+            <a href="http://long.mvp9.com" class="fl footlogo-2" title="猎龙战记"></a>
+            <a href="http://www.nd.com.cn/" class="fl footlogo-3" title="网龙网络公司"></a>
+            <div class="fl footerInf">
+                <p>
+                    <a href="http://www.mvp9.com/about.html">关于萌萌哒&nbsp;|</a>
+                    <a href="javascript:void(0);">&nbsp;萌萌哒招聘&nbsp;|</a>
+                    <a href="http://www.mvp9.com/Contact.html">&nbsp;联系萌萌哒&nbsp;|</a>
+                    <a href="http://www.mvp9.com/map.html">&nbsp;网站地图&nbsp;|</a>
+                    <a href="javascript:void(0);">&nbsp;家长监护&nbsp;|</a>
+                    <a href="http://www.mvp9.com/report.html">&nbsp;监督举报&nbsp;</a>
+                </p>
+                <p>福州春萌信息科技有限公司</p>
+                <p><a href="http://www.beian.miit.gov.cn/">闽ICP备18014604号-2</a>闽网文（2018）6509-293号</p>
+                <p>出版版号：ISBN 978-7-89989-820-8</p>
+                <p>抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+                <p>本游戏适合18岁以上用户，不含有暴力、恐怖、残酷、色情等妨害未成年人身心健康的内容，属于绿色健康产品。</p>
+                <div class="age">
+                    <img src="/img/age.png" alt="本游戏适合18岁以上用户" title="本游戏适合18岁以上用户" />
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+
+</html>

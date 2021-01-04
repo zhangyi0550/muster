@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+ 
+    <head>
+        <title></title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            img{
+                width: 191px;
+                height: 252px;
+                margin: 0 auto;
+                display: block;
+            }
+            @keyframes gogogo{
+                from{transform: rotateY(0)}
+                to{transform: rotateY(-180deg)}
+            }
+            .active{
+                animation: gogogo .5s linear;
+                backface-visibility: hidden;
+            }
+        </style>
+        <meta charset="utf-8" />
+    </head>
+ 
+    <body>
+            <img id="img" src="img/cj-1.png" />
+        <script>
+            var img=document.getElementById("img");
+            img.onclick=function(){
+                this.className="active";
+                var _this=this;
+                setTimeout(function(){
+                    _this.src="img/cj-10.png";
+                },500)
+                 
+            }
+        </script>
+ 
+    </body>
+ 
+</html>

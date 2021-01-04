@@ -1,0 +1,68 @@
+html{
+		font-size: 100%;
+	}
+	body{
+		margin:0;
+		width:100%;
+		font-family: "microsoft yahei","微软雅黑";
+		font-size: 100%; 
+	}
+	
+	p,div,h1,h2,h3,h4,h5,h6{
+	    margin:0;
+	    padding:0;
+	    font-weight:normal;
+	}
+	ul,ol,dl,dd,dt,li{
+	    list-style:none;
+	    margin:0;
+	    padding:0;
+	}
+	a,i,b,u,em,strong,span,small{color: #5a5a5a;text-decoration: none;font-weight: 400;font-style:normal;	}
+	
+	*{padding:0; margin:0;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;-webkit-tap-highlight-color: transparent;outline: none;}
+	body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,form,input,font,figure{padding:0;font-family:Microsoft YaHei,Arial,Helvetica, sans-serif;font-size:100%;margin:0 auto; color:#505050;}
+	fieldset,img{ border:0; vertical-align:top;}
+	article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
+	.lf{float:left;}
+	.gt{float:right;}
+	a{ color:#333; text-decoration:none;}
+	a:link,a:visited{outline:none;}
+	a:hover{ text-decoration:none;outline:none;}
+	.clearfix:after{display: block;font-size:0;content: " ";clear: both;height:0; line-height:0;zoom: 1; visibility: hidden;}
+	input[type="submit"],
+	input[type="button"],
+	button {-webkit-appearance: none;outline:0;cursor: pointer;}
+	
+	i,em{ font-style: normal;}
+
+.main{ width:100%; max-width:720px; min-width:320px; font-size: 1.75em; line-height: 1.75em; overflow:hidden;}
+
+
+
+
+
+
+
+/***********************************媒体查询******************************************/
+		@media only screen and (max-width: 320px){
+			.main{ font-size:0.75em;line-height:1.8em;}
+		}
+		@media only screen and (max-width: 321px)and (max-width: 359px){
+			.main{ font-size:0.75em;line-height:1.8em;}
+		}
+		@media only screen and (min-width: 360px)and (max-width: 384px){
+			.main{ font-size:0.875em;line-height:1.8em;}
+		}
+		@media only screen and (min-width: 385px)and (max-width: 400px){
+			.main{ font-size:0.9em;line-height:1.8em;}
+		}
+		@media only screen and (min-width: 401px)and (max-width: 480px){
+			.main{ font-size:0.9em;line-height:1.8em;}
+		}
+		@media only screen and (min-width: 481px)and (max-width: 639px){
+			.main{ font-size:1.25em;line-height:1.8em;}
+		}
+		@media only screen and (min-width: 640px)and (max-width: 719px){
+			.main{ font-size:1.56em;line-height:1.8em;}
+		}

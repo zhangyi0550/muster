@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="css/2.css">
+    <title>Document</title>
+</head>
+<body>
+        <img src="img/slogan.png" class="slogan opacity">
+    <div class="down" style="display: block;"></div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script>
+
+$(window).scroll(function(){
+//获取距离浏览器顶部距离并赋值th
+var th = $(window).scrollTop();
+//用if判断，距离顶部大于300时给一个警告弹窗
+if(th>200){
+$('.down').hide();
+
+}else{
+    $('.down').show();
+}
+});
+
+</script>
+</html>

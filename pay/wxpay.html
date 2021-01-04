@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="charge">
+        <h1 style="display: block;font-family:Microsoft Yahei;font-size: 22px;">支付</h1>
+        <h2 style="color: #000;margin: 15px auto;text-align: center;font-size: 18px;font-family:Microsoft Yahei;">糖豆游戏</h2>
+        <p style="color: #000;margin: 5px auto;text-align: center;font-size: 26px;"><span>¥ </span><b style="color: #e9585f;" id="bPayMoney" runat="server">10000</b> </p>
+        <section class="main">
+            <div class="zzsjpay">
+                <ul>
+                    <li class="clearfix" style="border-top: 1px solid #d6d6d6;">
+                        <span>订  单  号：</span> <b style="float: right;margin-right: 15px;" id="bOrderNo" runat="server" >CZ20191113163700-70712</b>
+                    </li>
+                     <li class="clearfix">
+                        <span>充值账号：</span> <b style="float: right;margin-right: 15px;" id="bUserID" runat="server">15515573146</b>
+                    </li>
+                     <li class="clearfix">
+                        <span>游戏名字：</span> <b style="float: right;margin-right: 15px;" id="bGameName" runat="server">神兽</b>
+                    </li>
+                    <!-- <li class="clearfix">
+                        <span>付款金额：</span>
+                    </li> -->
+                    <li class="clearfix">
+                        <span>计费区域：</span><b style="float: right;margin-right: 15px;" id="bAreaName" runat="server">不周山</b>
+                    </li>
+                    
+                </ul>
+            </div>
+        </section>
+        <asp:Button Text="确认充值" ID="btnNext0" CommandName="0" Width="85%" runat="server" OnClick="btnNext0_Click" style="line-height: 45px; margin: 10px auto;display: block;border-radius:9px;border: none;background-color: #07c15d;font-size: 1.2em;color: #fff;"/>
+        <em class="bottom-word">支付安全由中国人民财产保险股份有限公司承担</em>
+    </section>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #container {
+            position: relative;
+            width: 520px;
+            height: 320px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .clear-fix:after {
+            content: ' ';
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+
+        .clear-fix {
+            zoom: 1;
+        }
+
+        .content {
+            margin: 0;
+            padding: 0;
+        }
+
+        .content li {
+            width: 520px;
+            height: 320px;
+            float: left;
+        }
+
+        .content img {
+            display: block;
+            border: none;
+        }
+
+        .trigger {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .trigger li {
+            float: left;
+            margin-left: 10px;
+            line-height: 18px;
+            color: #333;
+            font-size: 18px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .trigger li.current {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <ul class="clear-fix content">
+            <li>
+                <a href="javascript:"><img src="img/img1.jpg" alt=""></a>
+            </li>
+            <li>
+                <a href="javascript:"><img src="img/img2.jpg" alt=""></a>
+            </li>
+            <li>
+                <a href="javascript:"><img src="img/img3.jpg" alt=""></a>
+            </li>
+            <li>
+                <a href="javascript:"><img src="img/img5.jpg" alt=""></a>
+            </li>
+            <li>
+                <a href="javascript:"><img src="img/img6.jpg" alt=""></a>
+            </li>
+        </ul>
+        <ul class="clear-fix trigger">
+            <li class="current">●</li>
+            <li>●</li>
+            <li>●</li>
+            <li>●</li>
+            <li>●</li>
+        </ul>
+    </div>
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/slide.min.js"></script>
+<script>
+    $(function () {
+        $.slide('#container', '.content', '.trigger', {
+            auto: true,
+            delay: 4000,
+            interval: 4000,
+            duration: 400,
+            easing: 'linear',
+            activeCls: 'current'
+        });
+    });
+</script>
+
+</html>

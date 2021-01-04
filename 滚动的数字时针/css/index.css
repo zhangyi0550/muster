@@ -1,0 +1,35 @@
+* {
+	padding:0;
+	margin:0;
+	list-style:none;
+	vertical-align:middle;
+}
+body {
+	background:#000;
+	color:#333;
+	font-size:36px;
+}
+ul {
+	width:36px;
+	position:absolute;
+	transition:all .75s;
+}
+div {
+	width:36px;
+	position:absolute;
+	color:#FFFFFF;
+	top:36px;
+}
+nav {
+	width:290px;
+	margin:100px auto;
+	position:relative;
+	height:108px;
+	overflow:hidden;
+}
+li {
+	height:36px;
+}
+li.active {
+	color:#fff;
+}

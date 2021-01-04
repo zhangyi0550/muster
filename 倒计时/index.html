@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>yugi</title>
+<meta charset=UTF-8 />
+<style type="text/css">
+#div {
+    color: #A22900;
+    font-size: 20px;
+}
+</style>
+<script type="text/javascript">
+    var countdown = function ()
+    {
+        var reg = /^\d{2}$/;
+        var ending = new Date ("2019/11/25 17:00:00");
+        var now = new Date;
+        if (now >= ending)
+        {
+            clearTimeout(this.timeout);
+            div.innerHTML = "时间已到";
+            return;
+        }
+        var disc = ending - now;
+        var day = parseInt (disc / 1000 / 60 / 60 / 24);
+        var hour = parseInt (disc / 1000 / 60 / 60 % 24);
+        hour = !reg.test(hour) ? "0" + hour : hour;
+        var minute = parseInt (disc / 1000 / 60 % 60);
+        minute = !reg.test(minute) ? "0" + minute : minute;
+        var second = parseInt (disc / 1000 % 60);
+        second = !reg.test(second) ? "0" + second : second;
+        div.innerHTML = "距离高考还有<br / >" + day + "天" + hour + "小时" + minute + "分" + second + "秒";
+        this.timeout = setTimeout (countdown, 1000);
+    }
+     
+    onload = countdown;
+</script>
+</head>
+<body>
+    <div id="div"></div>
+</body>
+</html>

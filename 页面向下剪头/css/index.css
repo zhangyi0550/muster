@@ -1,0 +1,160 @@
+body{
+    background-color: #000;
+}
+.poster__arrows {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 28px;
+}
+
+.poster__arrow {
+    position: absolute;
+    width: 100%;
+    height: 24px;
+    background: url('../img/dd.png') no-repeat;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-color: transparent;
+    background-size: auto;
+    -webkit-animation-name: arrow;
+    animation-name: arrow;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.poster__arrow-1 {
+    top: 0;
+    animation:myfirst 1s infinite linear;
+    -moz-animation:myfirst 1s infinite linear; /* Firefox */
+    -webkit-animation:myfirst 1s infinite linear; /* Safari and Chrome */
+    -o-animation:myfirst 1s infinite linear; /* Opera */
+    animation-delay: 0s;
+}
+@keyframes myfirst
+{
+0%   {opacity: 1;}
+
+50%  {opacity: 0.4;}
+
+100% {opacity: 1;}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+    0%   {opacity: 1;}
+    
+    50%  {opacity: 0.4;}
+    
+    100% {opacity: 1;}
+    }
+
+@-webkit-keyframes myfirst /* Safari 鍜� Chrome */
+{
+    0%   {opacity: 1;}
+    
+    50%  {opacity: 0.4;}
+    
+    100% {opacity: 1;}
+    }
+
+@-o-keyframes myfirst /* Opera */
+{
+    0%   {opacity: 1;}
+    
+    50%  {opacity: 0.4;}
+    
+    100% {opacity: 1;}
+    }
+    .poster__arrow-2 {
+        top: 12px;
+        animation:second 1s infinite linear;
+        -moz-animation:second 1s infinite linear; /* Firefox */
+        -webkit-animation:second 1s infinite linear; /* Safari and Chrome */
+        -o-animation:second 1s infinite linear; /* Opera */
+        animation-delay: 0.5s;
+    }
+    @keyframes second
+    {
+    0%   {opacity: 1;}
+    
+    50%  {opacity: 0.4;}
+    
+    100% {opacity: 1;}
+    }
+    
+    @-moz-keyframes second /* Firefox */
+    {
+        0%   {opacity: 1;}
+        
+        50%  {opacity: 0.4;}
+        
+        100% {opacity: 1;}
+        }
+    
+    @-webkit-keyframes second /* Safari 鍜� Chrome */
+    {
+        0%   {opacity: 1;}
+        
+        50%  {opacity: 0.4;}
+        
+        100% {opacity: 1;}
+        }
+    
+    @-o-keyframes second /* Opera */
+    {
+        0%   {opacity: 1;}
+        
+        50%  {opacity: 0.4;}
+        
+        100% {opacity: 1;}
+        }
+        .poster__arrow-3 {
+            top: 24px;
+            animation:third 1s infinite linear;
+            -moz-animation:third 1s infinite linear; /* Firefox */
+            -webkit-animation:third 1s infinite linear; /* Safari and Chrome */
+            -o-animation:third 1s infinite linear; /* Opera */
+            animation-delay: 1s;
+        }
+        @keyframes third
+        {
+        0%   {opacity: 1;}
+        
+        50%  {opacity: 0.4;}
+        
+        100% {opacity: 1;}
+        }
+        
+        @-moz-keyframes third /* Firefox */
+        {
+            0%   {opacity: 1;}
+            
+            50%  {opacity: 0.4;}
+            
+            100% {opacity: 1;}
+            }
+        
+        @-webkit-keyframes third /* Safari 鍜� Chrome */
+        {
+            0%   {opacity: 1;}
+            
+            50%  {opacity: 0.4;}
+            
+            100% {opacity: 1;}
+            }
+        
+        @-o-keyframes third /* Opera */
+        {
+            0%   {opacity: 1;}
+            
+            50%  {opacity: 0.4;}
+            
+            100% {opacity: 1;}
+            }

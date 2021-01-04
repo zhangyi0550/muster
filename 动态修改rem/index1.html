@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .box{
+            width: 10rem;
+            height: 10rem;
+            background-color: green;
+        }
+        .text{
+            font-size: 1rem;
+        }
+        /* 第一种方法 */
+        /* @media screen and (max-width: 500px) and (min-width: 361px) {
+            html{
+                font-size: 18px;
+            }
+        }
+        @media screen and (max-width: 360px) {
+            html{
+                font-size: 15px;
+            }
+        } */
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p class="text">hello rem</p>
+    </div>
+    <!-- 第二种方法 -->
+    <script>
+        // 获取视窗的宽度
+        let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
+        console.log(htmlWidth);
+
+        // 获取视窗高度
+        let htmlDom = document.getElementsByTagName('html')[0];
+        console.log(htmlDom);
+        htmlDom.style.fontSize = htmlWidth / 10 + "px"
+    </script>
+</body>
+</html>

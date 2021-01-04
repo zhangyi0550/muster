@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>杂志网站手风琴幻灯片JS代码-素材中国一流素材网</title> 
+
+<style type="text/css">
+body{margin:0px;padding:0px;font-size:12px; color:#999;background:#000;}
+ul, li{margin:0px;padding:0px;float:left;list-style-type:none;}
+/* box */
+#box{width:304px;height:280px;border-left:1px solid #740a20;margin:10px auto;}
+#box li{width:21px;height:280px;overflow:hidden;position:relative;}
+#box li.hove{width:200px;text-align:right;}
+#box li span{width:20px;height:275px;top:0px;left:0px;color:#fff;cursor:pointer;text-align:center;padding:5px 0 0 0;background:#b9000d;position:absolute;border-right:1px solid #740a20;}
+#box li span.hove{background:#620317;}
+</style>
+
+<script type="text/javascript" src="images/animation.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+	var oBox = document.getElementById('box')
+	var aSpan = document.getElementsByTagName('span');
+	var aLi = document.getElementsByTagName('li');
+	var playtime = null;
+	var iNow = 0;
+	for(i=0;i<aSpan.length;i++){
+		aSpan[i].index = i;
+		aSpan[i].onclick = function(){
+			for(var len=aLi.length,i=0;i<len;i++)doMove(aLi[i], {width:21});
+			for(var len=aSpan.length,i=0;i<len;i++)aSpan[i].className = '';
+			this.className = 'hove';
+			doMove(this.parentNode, {width:200});
+			iNow = this.index;
+		};
+	}
+	playtime = setInterval(tab,3000);
+	oBox.onmouseover = function(){
+		clearInterval(playtime);
+	}
+	oBox.onmouseout = function(){
+		playtime = setInterval(tab,3000);
+	}
+	function tab(){
+		iNow == aLi.length-1 ? iNow = 0 : iNow++;
+		aSpan[iNow].onclick();
+	}
+};
+</script>
+
+</head>
+<body>
+
+
+<div id="box">
+	<ul>
+		<li class="hove"><span class="hove">男人装</span><a href="http://www.17sucai.com/"><img src="images/demo-13.jpg"></a></li>
+		<li><span>时尚健康</span><a href="http://www.17sucai.com/"><img src="images/demo-14.jpg"></a></li>
+		<li><span>芭莎男士</span><a href="http://www.17sucai.com/"><img src="images/demo-12.jpg"></a></li>
+		<li><span>时尚生活</span><a href="http://www.17sucai.com/"><img src="images/demo-10.jpg"></a></li>
+		<li><span>时尚旅游</span><a href="http://www.17sucai.com/"><img src="images/demo-11.jpg"></a></li>
+	</ul>
+</div>
+
+
+</body>
+</html>

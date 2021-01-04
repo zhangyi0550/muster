@@ -1,0 +1,54 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>测试</title>
+    <style type="text/css">
+        .divCss {
+            bottom: 0;
+            display: block;
+            height: 25px;
+            overflow: hidden;
+            padding: 0;
+            position: fixed;
+            right: 20px;
+        }
+
+        .contentCss {
+            background: #666;
+            height: 200px;
+            width: 200px;
+        }
+
+        .contentCssHeight {}
+
+        .titleCss {
+            width: 200px;
+            height: 25px;
+            line-height: 25px;
+            text-align: right;
+            margin: 0px;
+            background: #999999;
+        }
+
+        #close {
+            cursor: pointer;
+        }
+    </style>
+    <script language="javascript" type="text/javascript"
+        src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script language="javascript"
+        type="text/javascript">        $(function () {           //标题层的高度--提示打开或关闭           var titHeight=$("#ditTitle").height();           //内容层的高度           var conHeight=$("#divContent").height();                                 //打开或关闭            $("#close").toggle(function(){                //改变提示                $("#close").text("关闭");                //动画--一秒内消息层高度增加,top增加                $("#msgDiv").animate({height:titHeight+conHeight},1000,function(){                                        //展开后执行的函数                });            },function(){                //改变提示                $("#close").text("打开");                                //alert(temp+" "+titHeight);                $("#msgDiv").animate({height:titHeight},1000,function(){                    //关闭后执行的函数                });            })                        //执行            var myTimer,i=8;            function starFun()            {                //触发click事件,显示                            if(i==4)                {                    $("#close").click();                }                //清除timeout,触发click事件,关闭层                if(i==0)                {                    window.clearTimeout(myTimer);                    if($("#close").text()!="打开")                    $("#close").click();                }                myTimer=window.setTimeout(starFun,1000);                i=i-1;            }                         starFun()        });    </script>
+</head>
+
+<body>
+    <div style="height: 1000px; background: #ccc;"> 测试Div</div>
+    <div id="msgDiv" class="divCss">
+        <div id="ditTitle" class="contentCssHeight titleCss"> <span id="close">打开</span></div>
+        <div id="divContent" class="contentCss"> 这是一些测试内容</div>
+    </div>
+    <div style="height: 1000px; background: #C0C0C0;"> 测试Div</div>
+</body>
+
+</html>

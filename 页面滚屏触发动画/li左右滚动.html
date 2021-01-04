@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery.min.js"></script>
+    <title>Document</title>
+    <style type="text/css">
+		* {
+			padding: 0px;
+			margin: 0px;
+			color: #000;
+		}
+ 
+		.box {
+			width: 600px;
+			height: 30px;
+			line-height:30px;
+			position: relative;
+			overflow: hidden;
+			margin: 80px auto;
+			border: 1px solid #eee;
+		}
+ 
+		.roll {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+ 
+		.roll li {
+			color: #fff;
+			width: 200px;
+			line-height: 30px;
+			height: 30px;
+			float: left;
+			text-align: center;
+		}
+ 
+		.roll li a {
+			text-decoration: underline;
+		}
+	</style>
+	
+
+</head>
+<body>
+    <div class="box">
+		<ul class="roll">
+			<li>
+				<a href="http://www.baidu.com/" target="_blank">前后端分离之Vue（二）前后端结合</a>
+			</li>
+			<li>
+				<a href="http://www.baidu.com/" target="_blank">JQuery插件机制</a>
+			</li>
+			<li>
+				<a href="http://www.baidu.com/" target="_blank">ES6学习系列——Module</a>
+			</li>
+			<li>
+				<a href="http://www.baidu.com/" target="_blank">前后端分离之Vue（二）前后端结合</a>
+			</li>
+			<li>
+				<a href="http://www.baidu.com/" target="_blank">DOM --- Document类型常用的属性和方法</a>
+			</li>
+			<li>
+				<a href="http://www.baidu.com/" target="_blank">Web前端框架学习—Bootstrap</a>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+ 
+		(function ($) {
+			$.fn.extend({
+				cusmerSilder: function (options) {
+					var $ul = $(this).find("ul");
+					var ul_width = $ul.width();
+					var box_width = $(this).width();
+					if (box_width > ul_width) return;
+ 
+					init();
+					ul_width = $ul.width();
+					var current = 0;
+					var timer = null;
+ 
+					$ul.hover(function () {
+						clearInterval(timer);
+					}, function () {
+						timer = setInterval(function () {
+							goLeft();							
+						}, 20);
+					}).trigger("mouseleave");
+ 
+ 
+					function init() {
+						var $ul_li = $ul.find("li");
+						var li_length = $ul_li.length;
+						var li_width = $ul_li.first().width();
+						$ul.css("width", li_width * li_length * 2);
+						$ul.append($ul.html());
+					}
+					function goLeft(){
+						--current;
+						if (current == -(ul_width / 2)) {
+							current = 0;
+						}
+						$ul.css({ left: current });
+					}
+				}
+			});
+		})(jQuery)
+ 
+		$(function () {
+			$(".box").cusmerSilder();
+ 
+		});
+	</script>
+
+</body>
+</html>

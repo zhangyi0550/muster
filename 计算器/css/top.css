@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.Tophead {
+    width: 85%;
+    height: 41px;
+   margin-left: 7.5%;
+    float: left;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.Tophead .right span {
+    margin-right: 15px;
+    margin-left: 15px;
+    color: #999
+}
+
+.Tophead .fl {
+    float: left;
+    padding: 1px 0px;
+}
+
+.Tophead .fr {
+    float: right;
+    position: relative;
+    width: 600px;
+    z-index: 102;
+    font-size: 14px;
+}
+
+.Tophead .logo {
+    width: 300px;
+}
+
+.Tophead .logo .logoLy img {
+    margin-top: 5px;
+}
+
+.Tophead .logo .logoLy {
+    position: relative;
+    float: left;
+    z-index: 102;
+}
+.Tophead #StranLink{
+    color: black;
+}
+.Tophead #StranLink:hover{
+    color: blue;
+    display: block
+}
+.mainNav_menu {
+    display: block;
+    padding-top: 7px;
+}
+
+.mainNav_menu li {
+    float: left;
+    text-align: center;
+    display: block;
+    padding: 0px 10px;
+    background: url() no-repeat right center;
+}
+
+.mainNav_menu li a {
+    color: #757575;
+    text-decoration: none;
+    line-height: 34px;
+    height: 34px;
+    text-align: center;
+    padding: 0 10px;
+    display: block;
+    _width: 48px;
+}
+
+.mainNav_menu li a:hover {
+    color: #3f240e;
+    text-decoration: none;
+}
+
+.mainNav_menu .mainleyoul {
+    height: 34px;
+}
+
+    .mainNav_menu .mainleyoul .leyouGame_qx {
+        margin-bottom: 7px;
+        margin-top: 3px;
+        text-align: left;
+        padding: 0 17px 0px 5px;
+        line-height: 24px;
+        height: 24px;
+        display: block;
+        border: 1px #dfdfdf solid;
+        background: url(http://img.td22.com/Games/td22/zhl/img/xialaBg.png) no-repeat right center;
+    }
+
+.mainNav_menu .mainleyoul ul {
+    z-index: 100;
+    border: 1px #dfdfdf solid;
+    background: #f6f6f6;
+    position: absolute;
+    right: 9px;
+    top: 36px;
+    width: 242px;
+    *width: 240px;
+    display: none;
+}
+
+.mainNav_menu .mainleyoul:hover .sub_nav_01 {
+    display: block;
+}
+
+.mainNav_menu .mainleyoul li {
+    float: left;
+    display: block;
+    padding: 0 0px;
+    width: 120px;
+    background: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.mainNav_menu .mainleyoul li a {
+    text-align: left;
+    padding: 0 12px;
+    line-height: 24px;
+    height: 24px;
+    display: block;
+    _padding-bottom: 6px;
+}
+
+.mainNav_menu .mainleyoul li a:hover {
+    color: #3f240e;
+    text-decoration: none;
+}
+.mainNav_menu .mainleyoul li dl {
+    float: left;
+    text-align: left;
+}
+
+.mainNav_menu .mainleyoul li dl dd,
+.mainNav_menu .mainlevel li dl dt {
+    border-bottom: 1px #f9f9f9 solid;
+    height: 32px;
+    line-height: 32px;
+    display: block;
+}
+
+.mainNav_menu .mainleyoul li dl dt {
+    color: #e5124a;
+    line-height: 34px;
+    height: 34px;
+    padding: 0 10px;
+}
+
+.mainNav_menu .mainleyoul .gameMenu01 {
+    background: #fff;
+}
+
+.mainNav_menu .mainleyoul .gameMenu02 {
+    background: #f6f6f6;
+}
+
+.gameHot_M {
+    background: url(http://szhuodong.duowan.com/s/topBar/images/hotIcon.png) no-repeat right;
+    padding-right: 26px;
+}
+
+.header1 {
+    z-index: 50;
+    position: relative;
+    top: 0px;
+}
+
+
+
+
+
+/******激活礼包开始***********/
+.libaoDh_bg {
+    background: url(http://img.td22.com/Games/TD22/ss/img/libaoBg_zy.jpg) no-repeat center top;
+}
+
+.dengluBox {
+    background: #bda534;
+    padding: 5px 10px;
+    color: #fff;
+    border: 1px solid #bda534;
+    -moz-border-radius: 5px; /* Gecko browsers */
+    -webkit-border-radius: 5px; /* Webkit browsers */
+    border-radius: 5px; /* W3C syntax */
+    margin-left: 10px;
+}
+
+.rightTT .linbaolist {
+    padding: 23px 19px 0 20px;
+    margin-left: 0px;
+    min-height: 769px;
+}
+
+.rightTT .libaoJhBox {
+    text-align: 14px;
+    line-height: 30px;
+}
+
+.libaoJhBox select {
+    width: 200px;
+    height: 35px;
+    border: 1px solid #aeaeb0;
+    line-height: 35px;
+    text-indent: 5px;
+    color: #999;
+    margin: 0px 0px;
+    background: #fff;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.libaoJhBox .inputtext {
+    width: 200px;
+    height: 35px;
+    border: 1px solid #aeaeb0;
+    line-height: 35px;
+    text-indent: 5px;
+    color: #999;
+}
+
+.libaoJhBox label {
+    float: left;
+    display: block;
+    text-align: right;
+    width: 120px;
+}
+
+.zhlBton {
+    background: #fff url(http://img.td22.com/Games/TD22/ss/img/yuyuebgico.jpg) no-repeat 0px 0px;
+    width: 192px;
+    height: 60px;
+    color: #513105;
+    font-size: 20px;
+    letter-spacing: 10px;
+    text-align: center;
+    font-family: "Microsoft Yahei","宋体";
+    border: 0;
+    margin: 20px 0px 20px 100px;
+}
+
+.libaoJhBox .mode-title {
+    border-bottom: 1px solid #eeeef0;
+    margin: 20px 0px;
+    font-weight: 700;
+}
+
+    .libaoJhBox .mode-title span {
+        background: url() no-repeat -285px 15px;
+        padding-left: 20px;
+        margin-bottom: -1px;
+        display: inline-block;
+        height: 47px;
+        line-height: 47px;
+        font-size: 20px;
+        color: #993333;
+    }
+
+.copyIco {
+    padding: 11px 15px 10px;
+    width: 60px;
+    height: 32px;
+    background: #993333;
+    text-align: center;
+    margin-top: 2px;
+    top: 2px;
+    color: #fff;
+    margin-left: -1px;
+    vertical-align: middle;
+}
+
+select {
+    -webkit-appearance: menulist;
+    box-sizing: border-box;
+    align-items: center;
+    border: 1px solid;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    color: black;
+    background-color: white;
+    cursor: default;
+}
+
+.slt_box {
+    position: relative;
+    padding: 0;
+    -webkit-margin-before: 0;
+    display: block;
+    float: left;
+    margin-right: 0px;
+}
+
+    .slt_box:before {
+        content: '';
+        position: absolute;
+        top: 12px;
+        left: 180px;
+        width: 0px;
+        height: 0px;
+        border-bottom: 10px solid #ffffff;
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        border-left: 10px solid transparent;
+        box-shadow: 1px 1px 0 #4e4e4e;
+        pointer-events: none;
+    }
+/******激活END***********/

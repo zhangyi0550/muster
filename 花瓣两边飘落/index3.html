@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>snowfall演示</title>
+		
+		<!--
+        	作者：ganquanzhong@qq.com
+        	时间：2018-06-20
+        	描述：Make it snow on you page or elements
+        
+			 该插件的参数有：
+			flakeCount|number 雪花数量
+			flakeColor|#RGB 雪花颜色
+			
+			minSize|number 雪花最小体积
+			maxSize|number 雪花最大体积
+			minSpeed|number 雪花最小速度
+			maxSpeed|number 雪花最大速度
+			round|boolean true雪花圆形|false方形(笑哭)
+			shadow|boolean true雪花有阴影|false无阴影
+			image|url 雪花图片
+			
+			author：ganquanzhong
+			blog：https://www.jianshu.com/p/410b448aca3e
+		-->
+		
+		<style>
+			/*JQuery-Snowfall CSS*/
+		
+			body {
+				overflow: hidden;
+			}
+			
+			.heart-body {
+				width: 500px;
+				margin: 100px auto;
+				position: relative;
+			}
+			
+			.snowfall-flakes:before,
+			.snowfall-flakes:after {
+				
+				content: "ganquanzhong";
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				display: block;
+				width: 20px;
+				height: 38px;
+				background: red;
+				border-radius: 50px 50px 0 0;
+			}
+			
+			.snowfall-flakes:before {
+				-webkit-transform: rotate(-45deg);
+				/* Safari 和 Chrome */
+				-moz-transform: rotate(-45deg);
+				/* Firefox */
+				-ms-transform: rotate(-45deg);
+				/* IE 9 */
+				-o-transform: rotate(-45deg);
+				/* Opera */
+				transform: rotate(-45deg);
+			}
+			
+			.snowfall-flakes:after {
+				left: 13px;
+				-webkit-transform: rotate(45deg);
+				/* Safari 和 Chrome */
+				-moz-transform: rotate(45deg);
+				/* Firefox */
+				-ms-transform: rotate(45deg);
+				/* IE 9 */
+				-o-transform: rotate(45deg);
+				/* Opera */
+				transform: rotate(45deg);
+			}
+		</style>
+	</head>
+	<body>
+		
+		<!--使用CDN-->
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/JQuery-Snowfall/1.7.4/snowfall.jquery.min.js"></script>
+		<!--javascript脚本-->
+		<script>
+			//调用飘落函数 实现飘落效果
+			$(document).snowfall({
+				flakeCount: 65 ,// 数量
+				round:true, //圆形
+				//shadow:true, //阴影
+				minSpeed:1, //最小速度
+				maxSpeed:5 //最大速度
+				
+			});
+			//使用图像作为雪花而不是纯色元素的功能。
+			$(document).snowfall({
+				image :"img/icon_petal_4.png", 
+				minSize: 8, 
+				maxSize:50,
+				minSpeed:1,
+				maxSpeed:5
+			});
+			$(document).snowfall({
+				image :"img/icon_petal_8.png", 
+				minSize: 8, 
+				maxSize:50,
+				minSpeed:1,
+				maxSpeed:5
+			});
+		</script>
+	</body>
+</html>

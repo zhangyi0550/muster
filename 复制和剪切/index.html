@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>JS兼容性非常好的原生态实现文本复制与剪切插件clipboard.min.js下载地址</title>
+
+<script src="js/clipboard.min.js"></script>
+<style>
+.demo{width:360px;margin:50px auto 10px auto}
+.btn {
+	text-transform: uppercase;
+	background: rgb(0, 100, 0); color: white;
+	padding: 10px; border-radius: 5px;
+	cursor: pointer;margin:10px auto;width:100px;text-align:center;
+}
+.btn:hover {background: rgb(0, 75, 0);}
+input,textarea{padding:10px; border:1px solid #d3d3d3;width:220px}
+textarea{height:80px}
+
+
+</style>
+
+</head>
+
+<body>
+ 
+<div id="main">
+	 
+	
+	<div class="demo">
+		<input id="foo" value="http://www.17sucai.com">
+
+		<button class="btn" data-clipboard-target="#foo" aria-label="复制成功！">复制</button>
+		<br/>
+		<textarea id="bar">JS兼容性非常好的原生态实现文本复制与剪切插件clipboard.min.js下载地址</textarea>
+		<br/>
+		<button class="btn" data-clipboard-action="cut" data-clipboard-target="#bar" aria-label="已剪切">剪切</button>
+	</div>
+	 
+</div>
+
+<script>
+//new Clipboard('.btn');
+var clipboard = new Clipboard('.btn');
+
+clipboard.on('success', function(e) {
+	var msg = e.trigger.getAttribute('aria-label');
+	alert(msg);
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+
+    e.clearSelection();
+});
+</script>
+
+ 
+
+ 
+</body>
+</html>

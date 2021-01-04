@@ -1,0 +1,6 @@
+gem sources --remove https://rubygems.org/ 
+gem sources -a http://ruby.sdutlinux.org/ 
+gem sources -l 
+
+*** CURRENT SOURCES *** 
+http://ruby.sdutlinux.org

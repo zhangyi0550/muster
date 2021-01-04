@@ -1,0 +1,16 @@
+* { margin: 0; padding: 0; }
+
+.draw { 
+    width: 532px; 
+    height: 392px; 
+    margin: 0 auto; 
+    padding: 8px 6px; 
+    background: url('../img/lottery1-bg.png') no-repeat;
+}
+.draw .item { width: 125px; height: 121px; background: url('../img/bg1.png') no-repeat;}
+.draw .item.active {  background: url('../img/bg2.png') no-repeat; }
+.draw .img { display: table-cell; width: 124px; height:73px; vertical-align: middle; text-align: center; }
+.draw .img img { vertical-align: top; }
+
+
+.draw .draw-btn { display: block;margin-left: 22px;width: 213px; height: 122px; line-height: 150px; border-radius: 20px;background: url('../img/start.png') no-repeat; font-size: 25px; font-weight: 700; text-indent: -9999px; text-decoration: none; }

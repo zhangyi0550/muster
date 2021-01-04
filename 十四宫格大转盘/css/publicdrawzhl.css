@@ -1,0 +1,228 @@
+﻿
+/**抽奖**/
+/* 效果CSS开始 */
+#lottery{width:506px;height:405px;margin:0px auto;background:url(../img/cj-bg.png) no-repeat;padding: 3px 9px 0px 4px;float: left;}
+#lottery table td{width:100px;height:100px;text-align:center;vertical-align:middle;font-size:16px;color:#333;color: #fff;}
+#lottery table td  .cjdlBox{font-size: 14px;color: #a7def3;}
+#lottery table td  .cjdlBox .shengSy{font-size: 14px;color: #a7def3;}
+#lottery table td  .cjdlBox .shengSy.cjnum {font-weight: 700;color: #ffff01; display: block;}
+#lottery table td  .cjdlBox .shengSy.syhbs {font-weight: 700;color: #ffff01; display: block;}
+#lottery table td a{line-height:158px;display:block;text-decoration:none;margin:0 auto;width:192px;height:155px}
+    #lottery table td.active {
+        background: #52ECDE;
+    }
+    #lottery tr{
+        width: 402px;
+        height: 100px;
+    }
+/*#lottery table td.active{background-color:#9f121d;}*/
+#lottery table td  img{width:95px;height:83px;}
+/* 效果CSS结束 */
+
+/**弹出抽奖恭喜**/
+.gongxBox {
+width:450px;height:200px;background:#FFF ;overflow:hidden;position:relative;
+
+}
+.gongxtext{width:360px;background:#fff url(../images/kuailebiaoq.jpg) no-repeat 20px 0px;margin:50px auto;position: relative;
+z-index: 2;
+height:150px;
+padding-left:60px;
+ font-size:14px;
+ text-align:center;
+overflow: hidden;
+}
+    .gongxtext a {color: #fff;border: none;font-family: inherit;font-size: inherit;color: inherit;
+ background: #e83455;padding: 5px 10px;width:100px;  margin: 5px 0px;height:30px;line-height:30px;
+text-transform: uppercase;letter-spacing: 1px;font-weight: 700;outline: none;position: relative;
+-webkit-transition: all 0.3s;-moz-transition: all 0.3s;transition: all 0.3s;
+cursor: pointer;padding: 5px 10px;width:150px;display: inline-block;margin: 5px 0px;
+ border-radius:5px;border: 3px solid #fff;color: #fff;overflow: hidden;color: #fff;   }
+ .gongxtext h4 { font-size:18px;margin-bottom:20px;}
+    
+.close_btn03{position: absolute;color: rgb(170, 170, 170);font-family: Verdana;font-weight: bold;text-decoration: none;z-index: 10001;
+font-size: 20px;
+top: 6px;
+right: 12px;}
+    .close_btn03:hover {
+    color:#ca1946;}
+
+/***选择大区**/
+.xuanzDq {width: 700px;}
+    .xuanzDq .choosequ {  font-family:"Microsoft YaHei";
+    }
+        .xuanzDq .choosequ select {
+            font-family: "Microsoft YaHei";
+            width: 150px;
+            height: 25px;
+            border: 1px solid #458F32;
+            font-size: 14px;
+        }
+        .xuanzDq .choosequ span {
+            margin-right: 10px;
+            color: #0F8B50;
+        }
+
+        .xuanzDq .choosequ select {
+            width: 150px;
+            height: 25px;
+            border: 1px solid #458F32;
+            font-size: 14px;
+            background: #458F32;
+            color: #fff;
+        }
+.xuanzDq  .choosequ .listqu{font: 12px/20px; }
+        .xuanzDq .choosequ select:hover {
+            background: #458F32;
+        }
+.Tophead{width:1280px;margin:0 auto;padding-top: 0px;padding-bottom: 0px;}
+.Tophead .right span{margin-right: 15px;margin-left: 15px;color: #999}
+.Tophead  .fl {float: left;padding:1px 0px;}
+.Tophead .fr { float: right;position:relative;z-index: 102;}
+.Tophead .logo {width:425px;}
+.Tophead .logo .logoLy img {margin-top:5px;}
+.Tophead .logo .logoLy {position: relative;float:left;z-index: 102;}
+
+.mainNav_menu {display:block;padding-top:7px;}
+.mainNav_menu li {float:left;text-align:center; display:block;padding: 0px 10px;background: url() no-repeat right center;}
+.mainNav_menu li a {color: #757575; text-decoration:none; line-height:34px; height:34px; text-align:center; padding:0 10px; display:block; _width:48px;}
+.mainNav_menu li a:hover {color:#3f240e; text-decoration:none;}
+ .mainNav_menu .mainleyoul {height:34px;background:none;}
+.mainNav_menu .mainleyoul .leyouGame_qx {margin-bottom:7px;margin-top:3px;text-align:left; padding:0 17px 0px 5px; line-height:24px; height:24px; display:block;border: 1px #dfdfdf solid;background: url(http://img.td22.com/Games/TD22/zhl/img/xialaBg.png) no-repeat right center;
+}
+.mainNav_menu .mainleyoul ul {z-index:100;border: 1px #dfdfdf solid;background:#f6f6f6;position:absolute; right:9px; top:36px; width:242px;display:none; *width:240px;/*IE is great need, width>=li.length*/}
+.mainNav_menu  .mainleyoul  li{float:left;display:block;padding:0 0px;width:120px;background:none;position:relative;overflow:hidden;}
+.mainNav_menu  .mainleyoul  li a {text-align:left; padding:0 12px; line-height:24px; height:24px; display:block; _padding-bottom:6px;/*IE6 only*/}
+.mainNav_menu  .mainleyoul  li a:hover {color:#3f240e; text-decoration:none; }
+
+.mainNav_menu  .mainleyoul  li dl{float:left;text-align:left;}
+.mainNav_menu  .mainleyoul  li dl dd,.mainNav_menu .mainlevel li dl dt{border-bottom: 1px #f9f9f9 solid;height: 32px;line-height: 32px; display:block;}
+.mainNav_menu  .mainleyoul  li dl dt{color:#e5124a; line-height:34px; height:34px;  padding:0 10px; }
+.mainNav_menu .mainleyoul  .gameMenu01{background:#fff;}
+.mainNav_menu  .mainleyoul  .gameMenu02{background:#f6f6f6; }
+.gameHot_M{background: url(http://szhuodong.duowan.com/s/topBar/images/hotIcon.png) no-repeat right;padding-right: 26px;}
+
+       
+.TopH_adImg_div {margin-top: 0px;width: 1100px;height: 190px;display: inline;background: url() no-repeat;display: none;position: absolute;z-index:102;top: 0px;left:-160px;}
+.TopH_adImg_div a {width: 100%;height: 100%;display: inline-block;}
+.TopH_adImg {float: left;width: 250px;height: 43px;margin-left: 0px;background: url() no-repeat left top;position: relative;z-index:15;}
+.TopH_header {width: 250px;float: right;position: relative;z-index:101;}
+
+
+.header1 {z-index:50;position: relative;top:0px;}
+
+
+/**中奖记录查询**/
+#mask{
+        display: none;
+		overflow:hidden;
+		position:absolute;
+        left:0;
+        top:0;
+        width:100%;
+        height:2021px;
+        z-index:20000;
+        background-color:#eee;
+		-moz-opacity: 0.7; 
+		opacity:.70; 
+		filter: alpha(opacity=70);
+    }
+#zhongjiangInfo{
+	display: none;/****/
+	position: absolute; 
+	top: 25%; 
+	left: 27%;
+	z-index: 99999;
+	width:760px;
+	padding:24px 27px;	
+	margin:0 auto;
+	 overflow:hidden;
+	}
+	/*
+	border-radius:20px;*/
+.zhongjiang_head{
+	
+	width:704px;
+	height:588px;
+	margin-left:1px;
+	background:#36383E;
+	border:5px solid #FFD18D;
+	color:#FFD18D;}
+.zhongjiang_head h2,.zhongjiang_head p{
+	display:block;
+	width:100%;
+	height:36px;
+	padding:10px;
+	text-align:center;
+	font-size:24px;
+	}
+.zhongjiang_head p{
+	font-size:16px;}
+.zhongjiang_head  table{
+	width:100%;
+	height:490px;}
+#zhongjiangInfo th,#zhongjiangInfo td{
+	width:310px;
+	padding:10px 0;
+	text-align:center;
+	text-align:center;
+	}
+#zhongjiangInfo tr{
+	display:block;
+	height:36px;} 
+#zhongjiangInfo th{	
+	font-size:24px;
+	}
+#zhongjiangInfo a{
+	display:inline-block;	
+	color:#FFD18D;}
+.close_zhongjiang{ 
+	position: absolute; 
+	top: 24px; 
+	left: 740px;
+	z-index: 99999;
+	width:50px;
+	height:50px;
+	background:#FFD18D;}
+#zhongjiangInfo .close_zhongjiang a{
+	color:black;
+	font: 46px arial,sans-serif;
+	text-align:center;
+	display:block;
+	width:50px;
+	height:50px;
+	line-height:50px;
+	}
+#zhongjiangInfo a:hover,#zhongjiangInfo .close_zhongjiang a:hover{color:#fff;}
+/**中奖记录查询结束**/
+
+.attention{
+    width:415px;
+    height:406px;
+    float:right;
+    margin-right:110px;
+    background:url('../images/ss-39.png')
+}
+.attention p{
+    width:100%;
+    height:25px;
+    line-height:25px;
+    text-align:center;
+    margin-top:19px;
+    font-size:19px;
+    font-weight:550;
+    color:white;
+}
+    .attention ol li {
+        width: 375px;
+        margin: 0 auto;
+        margin-top: 10px;
+        font-size: 16px;
+        color: #13633A;
+    }
+        .attention ol li span {
+            color: #FF4200;
+            font-size: 20px;
+            font-weight: 600;
+        }
+      

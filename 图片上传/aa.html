@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+   <title>图片生成</title>
+  <style>
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+ 
+body {
+    font-size: 12px;
+    font-family: Arial, Verdana;
+    color: #fff;
+    font-weight: 100;
+    cursor: default;
+    background:#FFFFFF;
+    min-width:320px;
+}
+textarea,select,input[type="text"],input[type="button"], input[type="submit"], input[type="reset"] {
+    -webkit-appearance: none;
+    appearance:none;
+    outline:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    border-radius:0;
+    background: none;
+}
+.head1{
+    width:100%;
+    height:50px;
+    line-height:50px;
+    color:#323232;
+    background:#F7F7F7;
+    text-align:center;
+    font-family:"微软雅黑";
+    border-bottom:5px solid #EFEFEF;
+}
+.cancel{
+    width:50px;
+    height:50px;
+    color:#989898;
+    position:absolute;
+}
+    .save_btn{
+        margin:20px auto;
+        border:none;
+        height:40px;
+        width:95%;
+        background:#ce1b1b!important;
+        border-radius:3px!important;
+        font-family:"微软雅黑";
+        font-size:16px;
+        color:white;
+        line-height:40px;
+    }
+    .info_list{
+        width:100%;
+        height:50px;
+        border-bottom:1px solid #F2F2F2;
+    }
+    .list_left{
+        width:27%;
+        margin-left:3%;
+        height:50px;
+        font-family:"微软雅黑";
+        font-size:16px;
+        color:#636363;
+        line-height:50px;
+        float:left;
+    }
+    .list_left2{
+        width:97%;
+        margin-left:3%;
+        height:50px;
+        font-family:"微软雅黑";
+        font-size:16px;
+        color:#636363;
+        line-height:50px;
+        float:left;
+    }
+    .list_left2 span{
+        color:#A04E52;
+        font-size:12px;
+        margin-left:5px;
+    }
+    .list_right{
+        width:65%;
+        margin-right:3%;
+        height:50px;
+        
+        color:#636363;
+        line-height:50px;
+        float:right;
+    }
+    .edit{
+        width:100%;
+        height:50px;
+        color:#898989;
+        font-family:"微软雅黑";
+        font-size:16px;
+        border:none;
+    }
+    .id_img_wp{
+        width:94%;
+        margin:0 auto;
+        min-height:30px;
+    }
+    .img_wp{
+        width:40%;
+        margin:0 5% 0 5%;
+        float:left;
+        cursor:pointer;
+    }
+    .img_wp img{
+        width:100%;
+        height:100%;
+    }
+    .img_intro{
+        color:#383838;
+        text-align:center;
+        font-family:"微软雅黑";
+        padding:10px 0 10px 0;
+    }
+    .cf{
+        clear:both;
+    }
+  </style>
+  <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+    <div class="head1">
+        <div class="cancel">〈</div>
+      购直销权
+      </div>
+      <form action="" onsubmit="return checkForm()">
+     <div class="info_list">
+        <div class="list_left">直播店名</div>
+        <div class="list_right">
+            <input type="text" class="edit" id="live_name"/>
+        </div>
+     </div>
+      <div class="info_list">
+        <div class="list_left">店主</div>
+        <div class="list_right">
+            <input type="text" class="edit" id="user_name"/>
+        </div>
+     </div>
+      <div class="info_list">
+        <div class="list_left">身份证号码</div>
+        <div class="list_right">
+            <input type="text" class="edit" id="card_no"/>
+        </div>
+     </div>
+      <div class="info_list">
+        <div class="list_left">电话号码</div>
+        <div class="list_right">
+            <input type="text" class="edit" id="call_no"/>
+        </div>
+     </div>
+      <div class="info_list" style="border-bottom:none;">
+        <div class="list_left2">身份证上传<span>(请上传身份证正反面，图片保持清晰)</span></div>
+     </div>
+     <div class="id_img_wp">
+        <input type="file" accept="image/*" onchange="getzImg(this)" style="display:none" value="" id="img_z"/>
+        <input type="file" accept="image/*" onchange="getfImg(this)" value="" id="img_f" style="display:none"/>
+        <div class="img_wp" onclick="zhengmian()">
+            <img src="up.png" id="zmz"/>
+            <p class="img_intro">身份证正面照</p>
+        </div>
+        
+        <div class="img_wp" onclick="fanmian()">
+            <img src="up.png" id="fmz"/>
+            <p class="img_intro">身份证反面照</p>
+        </div>
+        <div class="cf"></div>
+     </div>
+      <div class="info_list">
+        <div class="list_left">店铺类别</div>
+        <div class="list_right">
+            <select class="edit">
+                <option>滋补养神</option>
+            </select>
+        </div>
+     </div>
+     <div class="info_list">
+        <div class="list_left">主营商品</div>
+        <div class="list_right">
+            <input type="text" class="edit" id="sells"/>
+        </div>
+     </div>
+      <p style="text-align:center;">
+      <input type="submit" value="确认申请" class="save_btn"/>
+      </p>
+      </form>
+      <script>
+        $(function(){
+            $('.img_wp img').height($('.img_wp img').width()*0.6);
+             $(window).resize(function(){
+                $('.img_wp img').height($('.img_wp img').width()*0.6);
+            })
+        })
+          //正面
+          function zhengmian(){
+              $('#img_z').click();
+          }
+          function getzImg(imgFile){
+       
+              var file = imgFile.files[0];
+       
+              var reader = new FileReader();
+              reader.readAsDataURL(file);//将文件读取为Data URL小文件   这里的小文件通常是指图像与 html 等格式的文件
+              reader.onload = function(e){
+                  $("#zmz").attr("src",e.target.result);
+              }
+          }
+          
+          //反面
+          function fanmian(){
+              $('#img_f').click();
+          }
+          function getfImg(imgFile){
+       
+              var file = imgFile.files[0];
+       
+              var reader = new FileReader();
+              reader.readAsDataURL(file);
+              reader.onload = function(e){
+                  $("#fmz").attr("src",e.target.result);
+              }
+          }
+          //申请
+    function checkForm(){
+        if($('#live_name').val().length<1){
+            $('#live_name').focus();
+            alert('请输入直播店名');
+            return false;
+        }
+        if($('#user_name').val().length<1){
+            $('#user_name').focus();
+            alert('请输入店主名');
+            return false;
+        } 
+        var cardNo=$('#card_no');
+        if(cardNo.val() &&  /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/.test(cardNo.val())){
+            
+        }else{
+            cardNo.focus();
+            alert('身份证号码格式不正确！');
+            return false;
+        }
+        var call_no = $('#call_no');
+        if(call_no.val() && /^1[3|4|5|7|8]\d{9}$/.test(call_no.val())){
+            
+        } else{
+            call_no.focus();
+            alert('手机号码格式不正确！');
+            return false;
+        }
+        if($('#img_z').val()==null||$('#img_z').val()==''){
+            alert('请上传身份证正面照！');
+            return false;
+        }
+        if($('#img_f').val()==null||$('#img_f').val()==''){
+            alert('请上传身份证反面照！');
+            return false;
+        }
+        if($('#sells').val().length<1){
+            $('#sells').focus();
+            alert('请输入主营商品！');
+            return false;
+        }
+        //提交表单
+    }
+  </script>
+ </body>
+</html>

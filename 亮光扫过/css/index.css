@@ -1,0 +1,34 @@
+.banner{float:left;width: 250px; padding-top:10px;display:line-block;}
+.banner:before{
+	content:"";
+	position: absolute;
+	left: -600px;
+	top: -600px;
+	width: 300px;
+	height: 15px;outline:px solid red;
+	background-color: rgba(255,255,255,.6);
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-animation: searchLights 1s ease-in 0.5s infinite;
+	-o-animation: searchLights 1.s ease-in 0.5s infinite;
+	animation: searchLights 1s ease-in 0.5s infinite;
+}
+@-webkit-keyframes searchLights {
+	0% { left: -200px; top: 0; }
+	to { left: 220px; top: 100px; }
+}
+@-o-keyframes searchLights {
+	0% { left: -200px; top: 0; }
+	to { left: 220px; top: 100px; }
+}
+@-moz-keyframes searchLights {
+	0% { left: -200px; top: 0; }
+	to { left: 220px; top: 100px; }
+}
+@keyframes searchLights {
+	0% { left: -200px; top: 0; }
+	to { left: 220px; top: 100px; }
+}

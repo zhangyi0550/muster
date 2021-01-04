@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/**/
+.popKc {
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    _position: absolute;
+    overflow: hidden;
+    display: block;
+    background: #fff;
+    opacity: 1;
+}
+
+.popKc .popKbg {
+    width: 100%;
+    height: 100%;
+}
+
+.popKc .popKcont {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    top: 50%;
+    margin-top: -100px;
+    z-index: 12;
+}
+
+.popKc .popKcont i {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    -webkit-animation: z 5s linear 0s infinite;
+    animation: z 5s linear 0s infinite;
+}
+
+.popKc .popKcont p {
+    line-height: 200px;
+    position: relative;
+    float: left;
+    width: 100%;
+    z-index: 2;
+    color: #fff;
+    font-size: 18px;
+}
+
+.current.popKc {
+    -webkit-mask: url(../img/mask_7ced2418.png);
+    mask: url(../img/mask_7ced2418.png);
+    -webkit-mask-size: 2500% 100%;
+    mask-size: 2500% 100%;
+    -webkit-animation: maskIn 1s steps(24) forwards;
+    animation: maskIn 1s steps(24) forwards;
+}
+
+@-webkit-keyframes maskIn {
+    0% {
+        left: 0px;
+        -webkit-mask-position: left 0;
+        mask-position: left 0
+    }
+
+    99% {
+        left: 0px;
+        -webkit-mask-position: right 0;
+        mask-position: right 0;
+    }
+
+    100% {
+        left: 1000000px;
+    }
+}
+
+@keyframes maskIn {
+    0% {
+        left: 0px;
+        mask-position: left 0;
+        -webkit-mask-position: left 0;
+    }
+
+    99% {
+        left: 0px;
+        mask-position: right 0;
+        -webkit-mask-position: right 0;
+        display: none;
+    }
+
+    100% {
+        left: 1000000px;
+    }
+}
+
+#main {
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+    min-height: 900px;
+    margin: 0 auto;
+}
+
+.zbox {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+.zbox.current,
+.zbox1.current2 {
+    z-index: 2;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.zbox .page_bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.zbox1 .page_bg {
+    background: url(../img/bg.jpg) no-repeat center top;
+    transform: matrix(1.5, 0, 0, 1.5, 0, 0);
+    -webkit-transform: matrix(1.5, 0, 0, 1.5, 0, 0);
+    transition: all 1s;
+    -webkit-transition: all 1s;
+}
+
+.zbox1.current .page_bg {
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+}

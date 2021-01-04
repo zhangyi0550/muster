@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.shake.js"></script>
+    <title>Document</title>
+    <style type="text/css">
+        a {
+            color: #0072ca;
+        }
+
+        img {
+            border: none;
+        }
+
+        #wrapper {
+            width: 960px;
+            list-style: none;
+            margin: 10px auto;
+            padding: 0;
+            overflow: hidden;
+            zoom: 1;
+        }
+
+        #wrapper li {
+            float: left;
+            margin: 15px 30px 15px 0;
+        }
+
+        #wrapper li.last {
+            float: left;
+            margin: 15px 0 15px;
+        }
+
+        .bwWrapper {
+            position: relative;
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul id="wrapper">
+        <li>
+            <a href="javascript:" class="bwWrapper">
+                <img src="https://www.dowebok.com/demo/2013/8/images/Chrysanthemum.jpg" alt="">
+            </a>
+        </li>
+
+    </ul>
+
+</body>
+<script>
+    $(function () {
+        $('#wrapper li').shake();
+    });
+</script>
+
+</html>

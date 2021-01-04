@@ -1,0 +1,27 @@
+#callToAction div#Stage {
+    position: relative;
+    height: 250px;
+    width: 200px;
+    z-index: 0;
+    overflow: hidden;
+    display: block;
+    background: url('../img/1.png') no-repeat;
+    animation: sprite 3s steps(75) infinite;
+}
+#callToAction>a {
+    font-family: 'pt_serifbold',serif;
+    position: absolute;
+    text-decoration: none;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding: 145px 40px 0;
+    width: 120px;
+    height: 105px;
+    color: #fff;
+    text-shadow: 3px 3px 3px #000;
+}
+@keyframes sprite{100%{background-position:-15000px 0}}
+body{
+    background-color: #000
+}

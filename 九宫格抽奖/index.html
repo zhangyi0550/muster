@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>jQuery九宫格抽奖</title>
+<style type="text/css">
+* { margin: 0; padding: 0; }
+table { border-spacing: 0; border-collapse: collapse; text-align: center; }
+.draw { width: 460px; height: 470px; margin: 0 auto; padding: 40px; background-image: url(img/bg.png);}
+.draw .item { width: 150px; height: 150px; background-image: url(img/bg1.png); }
+.draw .item.active { background-image: url(img/bg2.png); }
+.draw .img { display: table-cell; width: 150px; height: 61px; vertical-align: middle; text-align: center; }
+.draw .img img { vertical-align: top; }
+.draw .gap { width: 5px; }
+.draw .gap-2 { height: 5px; }
+.draw .name { display: block; margin-top: 10px; font-size: 14px; }
+.draw .draw-btn { display: block; height: 150px; line-height: 150px; border-radius: 20px; font-size: 25px; font-weight: 700; color: #f0ff00; background-color: #fe4135; text-decoration: none; }
+.draw .draw-btn:hover { background-color: #fe8d85; }
+</style>
+</head>
+
+<body>
+
+<div class="draw" id="lottery">
+	<table>
+		<tr>
+			<td class="item lottery-unit lottery-unit-0">
+				<div class="img">
+					<img src="img/img1.png" alt="">
+				</div>
+				<span class="name">虚拟主机 1元/年</span>
+			</td>
+			<td class="gap"></td>
+			<td class="item lottery-unit lottery-unit-1">
+				<div class="img">
+					<img src="img/img2.png" alt="">
+				</div>
+				<span class="name">VPS 1元/30天</span>
+			</td>
+			<td class="gap"></td>
+			<td class="item lottery-unit lottery-unit-2">
+				<div class="img">
+					<img src="img/img3.png" alt="">
+				</div>
+				<span class="name">.top域名 1元/年</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="gap-2" colspan="5"></td>
+		</tr>
+		<tr>
+			<td class="item lottery-unit lottery-unit-7">
+				<div class="img">
+					<img src="img/img4.png" alt="">
+				</div>
+				<span class="name">免费主机1年</span>
+			</td>
+			<td class="gap"></td>
+			<td class=""><a class="draw-btn" href="javascript:">立即抽奖</a></td>
+			<td class="gap"></td>
+			<td class="item lottery-unit lottery-unit-3">
+				<div class="img">
+					<img src="img/img5.png" alt="">
+				</div>
+				<span class="name">.com域名 19元/年</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="gap-2" colspan="5"></td>
+		</tr>
+		<tr>
+			<td class="item lottery-unit lottery-unit-6">
+				<div class="img">
+					<img src="img/img7.png" alt="">
+				</div>
+				<span class="name">.com域名 19元/年</span>
+			</td>
+			<td class="gap"></td>
+			<td class="item lottery-unit lottery-unit-5">
+				<div class="img">
+					<img src="img/img6.png" alt="">
+				</div>
+				<span class="name">CDN加速 10元/15天</span>
+			</td>
+			<td class="gap"></td>
+			<td class="item lottery-unit lottery-unit-4">
+				<div class="img">
+					<img src="img/img8.png" alt="">
+				</div>
+				<span class="name">20元快云币</span>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+var lottery = {
+	index: -1,    //当前转动到哪个位置，起点位置
+	count: 0,     //总共有多少个位置
+	timer: 0,     //setTimeout的ID，用clearTimeout清除
+	speed: 20,    //初始转动速度
+	times: 0,     //转动次数
+	cycle: 50,    //转动基本次数：即至少需要转动多少次再进入抽奖环节
+	prize: -1,    //中奖位置
+	init: function(id) {
+		if ($('#' + id).find('.lottery-unit').length > 0) {
+			$lottery = $('#' + id);
+			$units = $lottery.find('.lottery-unit');
+			this.obj = $lottery;
+			this.count = $units.length;
+			$lottery.find('.lottery-unit.lottery-unit-' + this.index).addClass('active');
+		};
+	},
+	roll: function() {
+		var index = this.index;
+		var count = this.count;
+		var lottery = this.obj;
+		$(lottery).find('.lottery-unit.lottery-unit-' + index).removeClass('active');
+		index += 1;
+		if (index > count - 1) {
+			index = 0;
+		};
+		$(lottery).find('.lottery-unit.lottery-unit-' + index).addClass('active');
+		this.index = index;
+		return false;
+	},
+	stop: function(index) {
+		this.prize = index;
+		return false;
+	}
+};
+
+function roll() {
+	lottery.times += 1;
+	lottery.roll(); //转动过程调用的是lottery的roll方法，这里是第一次调用初始化
+	
+	if (lottery.times > lottery.cycle + 10 && lottery.prize == lottery.index) {
+		clearTimeout(lottery.timer);
+		lottery.prize = -1;
+		lottery.times = 0;
+		click = false;
+	} else {
+		if (lottery.times < lottery.cycle) {
+			lottery.speed -= 10;
+		} else if (lottery.times == lottery.cycle) {
+			var index = Math.random() * (lottery.count) | 0; //静态演示，随机产生一个奖品序号，实际需请求接口产生
+			lottery.prize = index;		
+		} else {
+			if (lottery.times > lottery.cycle + 10 && ((lottery.prize == 0 && lottery.index == 7) || lottery.prize == lottery.index + 1)) {
+				lottery.speed += 110;
+			} else {
+				lottery.speed += 20;
+			}
+		}
+		if (lottery.speed < 40) {
+			lottery.speed = 40;
+		};
+		lottery.timer = setTimeout(roll, lottery.speed); //循环调用
+	}
+	return false;
+}
+
+var click = false;
+
+window.onload = function(){
+	lottery.init('lottery');
+
+	$('.draw-btn').click(function() {
+		if (click) { //click控制一次抽奖过程中不能重复点击抽奖按钮，后面的点击不响应
+			return false;
+		} else {
+			lottery.speed = 100;
+			roll(); //转圈过程不响应click事件，会将click置为false
+			click = true; //一次抽奖完成后，设置click为true，可继续抽奖
+			return false;
+		}
+	});
+};
+</script>
+</body>
+</html>

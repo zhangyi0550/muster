@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Scroll Follow - jQuery跟随滚动插件演示2_dowebok</title>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.scrollfollow.js"></script>
+
+<style type="text/css">
+body { font-size: 0.9em; line-height: 1.4em;}
+h1 { text-align: center; font: 32px Microsoft Yahei;}
+h2 { font: 24px Microsoft Yahei;}
+h3 { font: 20px Microsoft Yahei;}
+h2, h3 { margin: 1em 0; font-family: Microsoft Yahei; font-weight: 500;}
+p { margin: 1em 0; line-height: 26px;}
+pre { padding: 20px; line-height: 20px; background-color: #f0f0f0;}
+.vad { font-family: arial,宋体,sans-serif; text-align:center;}
+.vad a { display:inline-block; height: 30px; margin:0 5px; padding: 0 20px; line-height: 30px; font-size:14px; text-align:center; color:#eee; text-decoration:none; background-color:#222;}
+.vad a:hover { color:#fff; background-color:#000;}
+table { width: 100%; border-spacing: 0; border-collapse: collapse;}
+th, td { padding: 10px; border: 1px solid #ddd;}
+.a728x90 { width: 728px; height: 90px; margin: 0 auto;}
+
+.wrap { width: 940px; overflow: hidden; zoom: 1; margin: 0 auto;}
+.main { width: 728px; float: left;}
+.side { float: right; width: 200px; height: 1000px;}
+
+.menu { height: 30px; margin-bottom: 10px; padding: 10px; background-color: #f0f0f0; text-align: center;}
+.menu a { display: inline-block; height: 30px; padding: 0 20px; line-height: 30px; font-size: 14px; color: #333; text-decoration: none;}
+.menu a:hover { color: #000; background-color: #e9e9e9;}
+.menu .cur { background-color: #ddd !important; color: #000;}
+
+#example { float: right; position: relative; width: 200px; height: 200px; background-color: #f90;}
+</style>
+
+<script>
+$(function(){
+	$('#example').scrollFollow({
+		relativeTo : 'bottom',
+		offset : 80
+	});
+});
+</script>
+</head>
+
+<body>
+<div class="menu">
+    <a href="./">演示1（默认效果）</a>
+    <a href="index_2.html" class="cur">演示2（相对于底部滚动）</a>
+    <a href="index_3.html">演示3（在指定容器内滚动）</a>
+    <a href="index_4.html">演示4（带开关控制）</a>
+</div>
+
+<div class="wrap">
+	<div id="example"><br>我会跟着滚动条一起滚动<br><br><br>你可以使用我放广告、分享或其他内容</div>
+
+	<div class="main">
+		<h1>Scroll Follow - jQuery跟随滚动插件演示2</h1>
+
+		<h2>插件介绍</h2>
+		<p><a href="https://www.dowebok.com/scroll-follow.html" target="_blank">点击查看介绍</a></p>
+
+		<h2>使用方法</h2>
+
+		<h3>引入文件</h3>
+		<pre>&lt;script src=&quot;js/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/jquery.scroll-follow.js&quot;&gt;&lt;/script&gt;</pre>
+
+		<h3>CSS</h3>
+		<p>必须为滚动的元素指定相对定位，否则无法滚动。</p>
+		<pre>#example {
+&nbsp;&nbsp; &nbsp;position : relative;
+}</pre>
+
+		<h3>调用方法</h3>
+		<p>Scroll Follow 的使用非常简单，直接为某个元素调用方法即可。</p>
+		<pre>$(function() {
+    $.scrollUp();
+});</pre>
+
+		<h2>参数</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>参数</th>
+					<th>说明</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>speed</td>
+					<td>滚动速度，单位为 ms，数值越小，速度越快，默认为 500</td>
+				</tr>
+				<tr>
+					<td>easing</td>
+					<td>如果你使用了 easing，可以使用 easing 的参数</td>
+				</tr>
+				<tr>
+					<td>offset</td>
+					<td>偏移，相对于顶部或底部的偏移（取决于 relativeTo 参数），单位为 px，默认为 0</td>
+				</tr>
+				<tr>
+					<td>container</td>
+					<td>滚动元素的容器（直接的父元素）的 id</td>
+				</tr>
+				<tr>
+					<td>killSwitch</td>
+					<td>开关 id，默认为 killSwitch，需要用到 jQuery Cookie 插件，以保留元素的状态</td>
+				</tr>
+				<tr>
+					<td>onText</td>
+					<td>滚动状态时开关文字，默认为 Turn Slide Off</td>
+				</tr>
+				<tr>
+					<td>offText</td>
+					<td>停止滚动状态时开关文字，默认为 Turn Slide On</td>
+				</tr>
+				<tr>
+					<td>relativeTo</td>
+					<td>相对与顶部（top）或底部（bottom）滚动，默认为顶部（top）</td>
+				</tr>
+				<tr>
+					<td>delay</td>
+					<td>延迟滚动，单位为毫秒 ms，默认为 0</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<p class="vad">
+	<a href="https://www.dowebok.com/" target="_blank">dowebok.com</a>
+	<a href="https://www.dowebok.com/13.html" target="_blank">说 明</a>
+	<a href="https://www.dowebok.com/13.html" target="_blank">下 载</a>
+</p>
+
+<style>
+* { margin: 0; padding: 0;}
+h1 { margin: 40px 0; font: 32px "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif; text-align: center;}
+
+.vad { margin: 50px 0 10px; font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif; text-align:center;}
+.vad a { display: inline-block; height: 36px; line-height: 36px; margin: 0 5px; padding: 0 50px; font-size: 14px; text-align: center; color: #eee; text-decoration: none; background-color: #222;}
+.vad a:hover { color: #fff; background-color: #000;}
+</style>
+
+</body>
+</html>

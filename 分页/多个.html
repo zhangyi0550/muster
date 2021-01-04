@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .Pagination {
+        float: right;
+        height: 55px;
+        _height: 45px;
+        line-height: 20px;
+        margin-right: 15px;
+        _margin-right: 5px;
+        color: #565656;
+        margin-top: 10px;
+        _margin-top: 20px;
+        clear: both;
+    }
+
+    .Pagination span {
+        margin-right: 5px;
+        display: block;
+        float: left;
+        margin-left: 5px;
+    }
+
+    .Pagination span b {
+        padding: 0 2px;
+    }
+
+    .Pagination div {
+        float: left
+    }
+
+    .Pagination a {
+        font-size: 12px;
+        text-decoration: none;
+        display: block;
+        float: left;
+        color: #565656;
+        border: 1px solid #cacaca;
+        height: 20px;
+        line-height: 20px;
+        padding: 0 10px;
+        margin: 0 2px;
+    }
+
+    .Pagination .Ellipsis {
+        line-height: 32px;
+        overflow: hidden;
+        display: none;
+    }
+
+    cite.FormNum {
+        display: block;
+        float: left;
+        line-height: 20px;
+        height: 20px;
+        font-style: normal;
+        padding-left: 10px;
+    }
+
+    #PageNum {
+        color: #777;
+        width: 30px;
+        height: 20px;
+        line-height: 20px;
+        border: 1px solid #cacaca;
+        margin: 0 5px;
+        text-align: center;
+    }
+
+    .Pagination a:hover,
+    .Pagination a.PageCur {
+        background-color: #ee6600;
+        border: 1px solid #d64c01;
+        color: #ffffff;
+    }
+
+
+    /* Demo */
+    .wrap {
+        width: 880px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .pagelist .item {
+        float: left;
+        width: 218px;
+        border: 1px solid #CCC;
+        text-align: center;
+    }
+
+    .newslist {
+        line-height: 24px;
+    }
+
+    .newslist ul li {
+        height: 24px;
+        border-bottom-width: 1px;
+        border-bottom-style: dashed;
+        border-bottom-color: #999;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .newslist a {
+        color: #444
+    }
+
+    .newslist ul li div {
+        float: left;
+        background-image: url(../Images/h-1.gif);
+        background-repeat: no-repeat;
+        background-position: 4px center;
+        padding-left: 16px;
+    }
+
+    .newslist ul li span {
+        float: right;
+        color: #666;
+</style>
+
+<body>
+    <div class="newslist">
+        <ul>
+            <li>
+                <div><a href="#">新闻标题标题1</a></div>
+                <span>2012/12/12</span>
+            </li>
+            <li>
+                <div><a href="#">新闻标题标题2</a></div>
+                <span>2012/12/12</span>
+            </li>
+            <li>
+                <div><a href="#">新闻标题标题3</a></div>
+                <span>2012/12/12</span>
+            </li>
+            <li>
+                <div><a href="#">新闻标题标题4</a></div>
+                <span>2012/12/12</span>
+            </li>
+            <li>
+                <div><a href="#">新闻标题标题5</a></div>
+                <span>2012/12/12</span>
+            </li>
+            <li>
+                <div><a href="#">新闻标题标题6</a></div>
+                <span>2012/12/12</span>
+            </li>
+            <li>
+                <div><a href="#">新闻标题标题7</a></div>
+                <span>2012/12/12</span>
+            </li>
+            <li>
+                <div><a href="#">新闻标题标题8</a></div>
+                <span>2012/12/12</span>
+            </li>
+            <li>
+                <div><a href="#">新闻标题标题9</a></div>
+                <span>2012/12/12</span>
+            </li>
+            <li>
+                <div><a href="#">新闻标题标题10</a></div>
+                <span>2012/12/12</span>
+            </li>
+            <li>
+                <div><a href="#">新闻标题标题11</a></div>
+                <span>2012/12/12</span>
+            </li>
+            <li>
+                <div><a href="#">新闻标题标题12</a></div>
+                <span>2012/12/12</span>
+            </li>
+            <li>
+                <div><a href="#">新闻标题标题13</a></div>
+                <span>2012/12/12</span>
+            </li>
+            <li>
+                <div><a href="#">新闻标题标题14</a></div>
+                <span>2012/12/12</span>
+            </li>
+            <li>
+                <div><a href="#">新闻标题标题15</a></div>
+                <span>2012/12/12</span>
+            </li>
+            <li>
+                <div><a href="#">新闻标题标题16</a></div>
+                <span>2012/12/12</span>
+            </li>
+            <li>
+                <div><a href="#">新闻标题标题17</a></div>
+                <span>2012/12/12</span>
+            </li>
+            <li>
+                <div><a href="#">新闻标题标题18</a></div>
+                <span>2012/12/12</span>
+            </li>
+            <li>
+                <div><a href="#">新闻标题标题19</a></div>
+                <span>2012/12/12</span>
+            </li>
+            <li>
+                <div><a href="#">新闻标题标题20</a></div>
+                <span>2012/12/12</span>
+            </li>
+        </ul>
+    </div>
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/page.js"></script>
+<script>
+    $('.newslist').kkPages({
+
+        PagesClass: 'li', //需要分页的元素
+        PagesMth: 5, //每页显示个数		
+        PagesNavMth: 5 //显示导航个数
+
+
+    });
+
+</script>
+
+</html>

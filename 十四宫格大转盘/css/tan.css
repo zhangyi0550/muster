@@ -1,0 +1,255 @@
+@charset "utf-8";
+/* CSS Document */
+html,body{padding:0;margin:0}
+.checkbox{width:100%;height:100px; margin:100px auto; text-align:center}
+.checkbox a{ display:inline-block;width:100px; height:40px; border:solid 1px #f00; color:#f00; text-align:center; line-height:40px; text-decoration:none}
+/*弹框样式1*/
+
+.cd-popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    z-index:9999;
+}
+.cd-popup.is-visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+    -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+    transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+.cd-popup-container {
+    position: relative;
+    width:415px;
+    margin:250px auto;
+    height:406px;
+    background: url('../img/tc-bg.png') no-repeat;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    -webkit-transform:scale(1.2);
+    -moz-transform:scale(1.2);
+    -ms-transform:scale(1.2);
+    -o-transform:scale(1.2);
+    transform:scale(1.2);
+    -webkit-backface-visibility: hidden;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -ms-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.cd-popup-close{ 
+    position: absolute;
+    right:-6px;
+    top:1px; 
+    z-index: 10;
+    width:36px;
+    height:36px; 
+    display: block;
+    font-size:14px;
+    background: url('../img/guanb.png') no-repeat;
+}
+.is-visible .cd-popup-container {-webkit-transform:scale(1); -moz-transform:scale(1); -ms-transform:scale(1); -o-transform:scale(1); transform:scale(1);}
+.cd-buttons{
+    width: 100%;
+    height: 315px;
+    overflow-y: scroll;
+    margin-top: 21px;
+}
+.cd-buttons li a {
+    width: 410px;
+    height:255px;
+    display: block;
+    margin: 0 auto;
+}
+.cd-buttons li{
+    width: 410px;
+    height: 25px;
+    display: block;
+    margin: 0 auto;
+}
+.cd-buttons li a .zj-name{
+    width: 175px;
+    height: 25px;
+    display: block;
+    float: left;
+    line-height: 25px;
+    text-align: center;
+    color: #179d1d;
+    font-style: normal;
+}
+.cd-buttons li a .zj-time{
+    width: 175px;
+    height: 25px;
+    display: block;
+    float: right;
+    line-height: 25px;
+    text-align: center;
+    color: #179d1d;
+    font-style: normal;
+}
+/* 滚动条样式 */
+.cd-buttons::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 4px;
+}
+.cd-buttons::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.2);
+}
+.cd-buttons::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 0;
+    background: rgba(0,0,0,0.1);
+}
+.cd-popup-5{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    z-index:9999;
+}
+.cd-popup-5.is-visible-5{
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+    -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+    transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+.cd-popup-container-5{
+    position: relative;
+    width:500px;
+    margin:250px auto;
+    height:340px;
+    background: url('../img/tc-bg-1.png') no-repeat;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    -webkit-transform:scale(1.2);
+    -moz-transform:scale(1.2);
+    -ms-transform:scale(1.2);
+    -o-transform:scale(1.2);
+    transform:scale(1.2);
+    -webkit-backface-visibility: hidden;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -ms-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.cd-popup-close-1{ 
+    position: absolute;
+    right:-27px;
+    top:-9px; 
+    z-index: 10;
+    width:31px;
+    height:31px; 
+    display: block;
+    background: url('../img/guanb.png') no-repeat center;
+}
+.is-visible-5
+ .cd-popup-container-5
+ {-webkit-transform:scale(1); -moz-transform:scale(1); -ms-transform:scale(1); -o-transform:scale(1); transform:scale(1);}
+.cd-buttons-5
+{
+    width: 500px;
+    height: 325px;
+    overflow-y: scroll;
+    margin: 0 auto;
+   
+}
+.cd-buttons-5 li a {
+    width: 400px;
+    height:25px;
+    display: block;
+    margin: 0 auto;
+}
+.cd-buttons-5 li{
+    width: 160px;
+    height: 60px;
+    float: left;
+}
+  .cd-buttons-5 li a .zj-name {
+        width: 200px;
+        height: 25px;
+        display: block;
+        float: left;
+        line-height: 25px;
+        text-align: center;
+        color: white;
+        font-style: normal;
+        font-size: 14px;
+    }
+    .cd-buttons-5 li a .zj-time {
+        width: 200px;
+        height: 25px;
+        display: block;
+        float: left;
+        line-height: 25px;
+        text-align: left;
+        color: white;
+        font-style: normal;
+        font-size: 14px;
+    }
+/* 滚动条样式 */
+.cd-buttons-5::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 4px;
+}
+.cd-buttons-5::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.2);
+}
+.cd-buttons-5::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 0;
+    background: rgba(0,0,0,0.1);
+}
+
+/* 弹窗title  css */
+.scroll-5 .gx-title{
+    width: 500px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #fcde95;
+    font-size: 25px;
+    display: block;
+}
+.scroll-5 .jp-img{
+    display: block;
+    float: left;
+    margin-top: 10px;
+}
+.scroll-5 .jp-name{
+    width: 375px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fcde95;
+    font-size: 18px;
+    display: block;
+    margin-top: 10px;
+}

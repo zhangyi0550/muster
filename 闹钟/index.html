@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .show{
+            width: 812px;
+            height: 414px;
+            background: url('as.png') no-repeat;
+        }
+        .show #show_h{
+            width: 180px;
+            height: 180px;
+            float: left;
+            margin-left: 50px;
+            line-height: 180px;
+            font-size: 105px;
+            text-align: center;
+        }
+        .show h3{
+            width: 80px;
+            height: 180px;
+            float: left;
+            margin-left: 0px;
+            line-height: 122px;
+            font-size: 105px;
+            text-align: center;
+        }
+        .show #show_m{
+            width: 180px;
+            height: 180px;
+            float: left;
+            margin-left: 0px;
+            line-height: 180px;
+            font-size: 105px;
+            text-align: center;
+        }
+        .show #show_s{
+            width: 180px;
+            height: 180px;
+            float: left;
+            margin-left: 0px;
+            line-height: 180px;
+            font-size: 105px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <audio src="3.mp3" id="audio"></audio>
+<div class="nz">
+
+<div class="show">
+<h2 id="show_h">00</h2>
+<h3>:</h3>
+<h2 id="show_m">00</h2>
+<h3>:</h3>
+<h2 id="show_s">00</h2>
+</div>
+</div>
+<div class="setNz">
+<h4>设定闹钟时间：</h4>
+<input type="number" id="set_h" placeholder="时" min="0" max="24">
+<input type="number" id="set_m" placeholder="分" min="0" max="59">
+<input type="number" id="set_s" placeholder="秒" min="0" max="59">
+<button id="setT">设定</button>
+<button id="stop">停止</button>
+</div>
+</body>
+<script>
+var audio = document.getElementById('audio');
+var show_h = document.getElementById('show_h');
+var show_m = document.getElementById('show_m');
+var show_s = document.getElementById('show_s');
+var set_h = document.getElementById('set_h');
+var set_m = document.getElementById('set_m');
+var setT = document.getElementById('setT');
+var stop = document.getElementById('stop');
+var timer = null;
+var sh, sm, ss;
+
+//设置一个定时器
+timer = setInterval(function(){
+//获取当前时间
+var times = new Date();
+//把当前时间的小时和分钟显示在页面上
+//此时注意getFill方法
+show_h.innerHTML = getFill(times.getHours());
+show_m.innerHTML = getFill(times.getMinutes());
+show_s.innerHTML = getFill(times.getSeconds());
+},1000)
+// 数字补位
+function getFill(n) {
+  return (n > 9 ? '' : '0') + n;
+}
+// 设定时间
+setT.onclick = function () {
+  var t = new Date();
+  t.setHours(Number(set_h.value));
+  t.setMinutes(Number(set_m.value));
+  t.setSeconds(Number(set_s.value));
+  sh = t.getHours();
+  sm = t.getMinutes();
+  ss = t.getSeconds();
+  
+}
+
+var timer = null;
+timer = setInterval(function () {
+var times = new Date();
+//更新了补0的时间
+show_h.innerHTML = getFill(times.getHours());
+show_m.innerHTML = getFill(times.getMinutes());
+show_s.innerHTML = getFill(times.getSeconds());
+//如果设定的时间等于当前的时间和分钟，两个同时满足，就播放音频
+if (times.getHours() == sh && times.getMinutes() == sm && times.getSeconds() == ss ) {
+audio.play();
+}
+}, 1000)
+// 点击停止
+stop.onclick = function () {
+    audio.pause();
+}
+
+// 在作用域的顶部创建一个变量，赋值为true，当作它可以播放音频。
+var isF = true;
+// 点击之后在停止播放后将这个变量改为false，说明不要再播放了。
+stop.onclick = function () {
+  audio.pause();
+  isF = false;
+}
+
+
+</script>
+</html>

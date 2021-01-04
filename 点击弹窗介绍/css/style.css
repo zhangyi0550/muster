@@ -1,0 +1,98 @@
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+ 
+  font-family: 'Microsoft Yahei', sans-serif;
+  font-size: 62.5%;
+  margin:0px;
+  padding:0px;
+  
+}
+#teamcont{
+	width: 1000px;
+	height: 650px;
+	margin: 0 auto;
+	padding:0 auto;
+}
+#teamcont .partener{
+	
+	margin-left:30px;
+	margin-top:30px;
+	
+}
+#teamcont #pichuan .partener{
+	float:left;
+}
+.pname{
+	padding:25px 0 10px 0;
+	font-weight:bold;
+	color:black;
+}
+.pinfo{
+	color:black;
+}
+.parinforma{
+	position:absolute;
+	z-index:10;
+	width:710px;
+	color:black;
+	display:none;
+	border:solid 5px #B93539;
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+	background:#FFFFFF;
+}
+#teamcont .partener .row1{
+	background-color:#0000CC;
+	filter:alpha(opacity=90); 
+	-moz-opacity:0.9; 
+	opacity:0.9;
+	-moz-border-radius:60px;
+	-webkit-border-radius:60px;
+	border-radius:60px;
+	cursor:pointer;
+	 -moz-box-shadow: 3px 3px 4px #939393;
+    -webkit-box-shadow: 3px 3px 4px #939393;
+    box-shadow: 3px 3px 4px #939393;
+    /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#939393')";
+    /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#939393');
+	
+}
+.showLeft{
+	float:left;
+	padding:20px 10px 10px 20px;
+}
+.showRight{
+	float:left;
+	
+}
+.showRight  .huncontent{
+	padding:40px 0px 20px 30px;
+	font-size:18px;
+	line-height:35px;
+	width:420px;
+	text-align:left
+}
+.closebtn{
+	clear:both;
+	position:relative;
+	top:3px;
+	left:670px;
+	width:36px;
+	height:36px;
+	background-image:url(../img/close-n.png);
+	cursor:pointer;
+}
+.cssshadow {
+    -moz-box-shadow: 1px 1px 20px 4px #afafaf;
+    -webkit-box-shadow:1px 1px 20px 4px #afafaf;
+    box-shadow:1px 1px 20px 4px #afafaf;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#afafaf')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#afafaf');
+}

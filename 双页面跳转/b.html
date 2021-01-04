@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>tab-JQ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #wrap {
+            margin: 90px 290px;
+        }
+
+        #tit {
+            height: 30px;
+            width: 600px;
+        }
+
+        #tit span {
+            float: left;
+            height: 30px;
+            line-height: 30px;
+            width: 200px;
+            font-size: 20px;
+            text-align: center;
+            color: #000000;
+            border-top: 1px solid #CCCCCC;
+        }
+
+        #con li {
+            display: none;
+            width: 600px;
+            border: 1px solid #CCCCCC;
+            font-size: 30px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+        #tit span.select {
+            background: #d6e9fd;
+            color: #ffffff;
+        }
+
+        #con li.show {
+            display: block;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="tit">
+            <span class="select">校园</span>
+            <span>社会</span>
+            <span>名企</span>
+        </div>
+        <ul id="con">
+            <li id="1" class="show">校园校园校园</li>
+            <li id="2">社会社会社会</li>
+            <li id="3">名企名企名企</li>
+        </ul>
+    </div>
+    <script>
+        //选项卡
+        $('#tit span').click(function () {
+            var i = $(this).index(); //下标第一种写法
+            //var i = $('tit').index(this);//下标第二种写法
+
+            $(this).addClass('select').siblings().removeClass('select');
+            $('#con li').eq(i).show().siblings().hide();
+        });
+
+        // 获取 被访问时的 url
+        var ur = location.href;
+        // 获取该url  = 后面的数字 （id）
+        var type = ur.split('?')[1].split("=")[1];
+
+        // 使用传过来的 数字 （id） 来控制该选项卡的切换
+        // 其实就是从页面 A 通过 URL ？ 后面的参数 给页面B 传一个 index
+
+        $('#tit span').eq(type - 1).addClass('select').siblings().removeClass('select');
+        $('#con li').eq(type - 1).show().siblings().hide();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="utf-8">
+	<title>Scroll Follow - jQuery跟随滚动插件演示1_dowebok</title>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.scrollfollow.js"></script>
+
+	<style type="text/css">
+		body {
+			font-size: 0.9em;
+			line-height: 1.4em;
+		}
+
+		h1 {
+			text-align: center;
+			font: 32px Microsoft Yahei;
+		}
+
+		h2 {
+			font: 24px Microsoft Yahei;
+		}
+
+		h3 {
+			font: 20px Microsoft Yahei;
+		}
+
+		h2,
+		h3 {
+			margin: 1em 0;
+			font-family: Microsoft Yahei;
+			font-weight: 500;
+		}
+
+		p {
+			margin: 1em 0;
+			line-height: 26px;
+		}
+
+		pre {
+			padding: 20px;
+			line-height: 20px;
+			background-color: #f0f0f0;
+		}
+
+		table {
+			width: 100%;
+			border-spacing: 0;
+			border-collapse: collapse;
+		}
+
+		th,
+		td {
+			padding: 10px;
+			border: 1px solid #ddd;
+		}
+
+		.a728x90 {
+			width: 728px;
+			height: 90px;
+			margin: 0 auto;
+		}
+
+		.wrap {
+			width: 940px;
+			height: 2500px;
+			overflow: hidden;
+			zoom: 1;
+			margin: 0 auto;
+		}
+
+		.main {
+			width: 728px;
+
+			float: left;
+		}
+
+		.side {
+			float: right;
+			width: 200px;
+			height: 1000px;
+		}
+
+		.menu {
+			height: 30px;
+			margin-bottom: 10px;
+			padding: 10px;
+			background-color: #f0f0f0;
+			text-align: center;
+		}
+
+		.menu a {
+			display: inline-block;
+			height: 30px;
+			padding: 0 20px;
+			line-height: 30px;
+			font-size: 14px;
+			color: #333;
+			text-decoration: none;
+		}
+
+		.menu a:hover {
+			color: #000;
+			background-color: #e9e9e9;
+		}
+
+		.menu .cur {
+			background-color: #ddd !important;
+			color: #000;
+		}
+
+		#example {
+			float: right;
+			position: relative;
+			width: 200px;
+			height: 200px;
+			background-color: #f90;
+		}
+	</style>
+
+	<script>
+		$(function () {
+			$('#example').scrollFollow();
+		});
+	</script>
+</head>
+
+<body>
+	<div class="menu">
+		<a href="./" class="cur">演示1（默认效果）</a>
+		<a href="index_2.html">演示2（相对于底部滚动）</a>
+		<a href="index_3.html">演示3（在指定容器内滚动）</a>
+		<a href="index_4.html">演示4（带开关控制）</a>
+	</div>
+
+	<div class="wrap">
+		<div id="example"><br>我会跟着滚动条一起滚动<br><br><br>你可以使用我放广告、分享或其他内容</div>
+
+	</div>
+
+
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			margin: 40px 0;
+			font: 32px "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+			text-align: center;
+		}
+
+		.vad {
+			margin: 50px 0 10px;
+			font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+			text-align: center;
+		}
+
+		.vad a {
+			display: inline-block;
+			height: 36px;
+			line-height: 36px;
+			margin: 0 5px;
+			padding: 0 50px;
+			font-size: 14px;
+			text-align: center;
+			color: #eee;
+			text-decoration: none;
+			background-color: #222;
+		}
+
+		.vad a:hover {
+			color: #fff;
+			background-color: #000;
+		}
+	</style>
+
+</body>
+
+</html>
